@@ -1,0 +1,17 @@
+name: LSUNBKAIGens640a0
+norm: SUNBKAIPGen
+train:
+  class: ai4ha.data.images.VAEDataset.VAEDataset
+  params:
+    model: SDXLVAEEMA
+    size: 640
+    encoder: VAE80
+    data_root: /
+    datasets:
+      - SUNcolon1DMp
+      - MultiCenterData640
+      - bkai640
+    normalization: 1.0
+    segmentation: true
+    augmentation: true
+    augprob: 0

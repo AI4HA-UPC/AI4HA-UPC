@@ -1,0 +1,3 @@
+batch_size: 80
+num_workers: 10
+shuffle: true

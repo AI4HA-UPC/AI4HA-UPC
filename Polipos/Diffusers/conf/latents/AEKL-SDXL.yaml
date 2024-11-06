@@ -1,0 +1,5 @@
+type: AEKL
+lib: diffusers
+model: /sdxl-vae
+norm_path: /Normalization/
+cuda: true

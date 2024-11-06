@@ -1,0 +1,12 @@
+name: LDPolypTest
+train:
+  class: ai4ha.data.images.ImagesColDataset.ImagesColDataset
+  params:
+    size: 480
+    dataset_dir: 
+      - /LDPolyp/test/images
+    data_csv: 
+      - /LDPolyp/LDPolip_test.txt
+    data_root: /
+    interpolation: bicubic
+    augmentation: false

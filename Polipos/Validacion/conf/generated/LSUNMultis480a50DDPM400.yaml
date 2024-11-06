@@ -1,0 +1,11 @@
+name: LSUNMultis480a50
+train:
+  class: ai4ha.data.images.GeneratedDataset.GeneratedDataset
+  params:
+    data_root: /PolypGenerated
+    dataset: LSUNMulti
+    size: 480
+    aug: 50
+    steps: DDPM-400
+    bbox: false
+    mask: false

@@ -1,0 +1,11 @@
+name: SUNColonTest
+train:
+  class: ai4ha.data.images.SUNcolon1DM.ExamplesTest
+  params:
+    size: 480
+    squarify: true
+    raw: true
+    local: true
+    negatives: false
+    augmentation: false
+  mask_channels: 1

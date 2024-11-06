@@ -1,0 +1,10 @@
+name: LSUNColon640
+train:
+  class: diffusion.data.SUNcolon.ExamplesTrain
+  params:
+    size: 640
+    data_csv: /data/LSUNColonDD/LSUNColon_images.txt
+    mask_csv: /data/LSUNColonDD/LSUNColon_masks.txt
+    data_root: /sunraw/
+    augmentation: false
+  mask_channels: 1

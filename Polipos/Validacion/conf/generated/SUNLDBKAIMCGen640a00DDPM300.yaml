@@ -1,0 +1,11 @@
+name: SUNLDBKAIMCGen640a00DDPM300
+train:
+  class: ai4ha.data.images.GeneratedDataset.GeneratedDataset
+  params:
+    data_root: /PolypGenerated
+    dataset: SUNLDBKAIMCGen
+    size: 480
+    aug: 00
+    steps: DDPMZDD-300
+    bbox: false
+    mask: false

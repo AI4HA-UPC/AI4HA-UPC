@@ -1,0 +1,10 @@
+name: LDPolypDD3
+train:
+  class: ai4ha.data.images.LDPolyp.ExamplesTrain
+  params:
+    size: 480
+    data_csv: LDPolip_train_dd3.txt
+    data_root: /LDPolyp
+    dataset: train
+    augmentation: false
+  mask_channels: 1

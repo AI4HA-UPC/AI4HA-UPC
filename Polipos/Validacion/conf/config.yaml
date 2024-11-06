@@ -1,0 +1,14 @@
+exp_dir: /misiones/Imagenes/Modelos/Diffusers/
+local: false
+projectconf:
+  total_limit: 2
+accelerator:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'no'
+  log_with: wandb
+time: 12
+
+
+defaults:
+  - dataloader: batch8
+  - _self_

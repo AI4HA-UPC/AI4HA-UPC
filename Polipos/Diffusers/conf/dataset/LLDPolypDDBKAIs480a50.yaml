@@ -1,0 +1,16 @@
+name: LLDPolypDDBKAIs480a50
+norm: LDPolypBKAI
+train:
+  class: ai4ha.data.images.VAEDataset.VAEDataset
+  params:
+    model: SDXLVAEEMA
+    size: 480
+    encoder: VAE60
+    data_root: /
+    datasets: 
+     - LDPolypDD
+     - bkai
+    normalization: 1.0
+    segmentation: true
+    augmentation: true
+    augprob: 0.5

@@ -1,0 +1,7 @@
+name: MultiCenter640
+train:
+  class: ai4ha.data.images.ColonDataset.ColonDataset
+  mask_channels: 1
+  params:
+    data_root: /MultiCenterData640/
+    size: 640

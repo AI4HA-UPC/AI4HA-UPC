@@ -1,0 +1,11 @@
+name: LLDPolyps480a50DDPM100
+train:
+  class: ai4ha.data.images.GeneratedDataset.GeneratedDataset
+  params:
+    data_root: /PolypGenerated
+    dataset: LDPolyp
+    size: 480
+    aug: 50
+    steps: DDPM-100
+    bbox: false
+    mask: false

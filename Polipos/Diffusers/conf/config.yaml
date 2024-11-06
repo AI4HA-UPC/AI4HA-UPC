@@ -1,0 +1,39 @@
+exp_dir: /misiones/Imagenes/Modelos/Diffusers/
+local: false
+projectconf:
+  total_limit: 2
+accelerator:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'no'
+  log_with: wandb
+samples:
+  samples_freq: 20
+  samples_num: 2
+  samples_gen: 2
+  seed: 1246578569
+  samples_size: 480
+  samples_latent_size: 80
+  gen_num_samples: 100000
+  num_inference_steps: 100
+  compression_level: 9
+time: 12
+train:
+  num_epochs: 5000
+  log_interval: 10
+  save_interval: 5
+  checkpoint_freq: 250
+  checkpoint_epoch_freq: 5
+  best_model: true
+  std_scaling: full
+ema:
+  inv_gamma: 1.0
+  power: 0.75
+  max_decay: 0.9999
+
+defaults:
+  - dataloader: batch128
+  - optimizer: adamw-lr4
+  - loss: L2
+  - lr_scheduler: cosine-w100
+  - latents: AEKL-SDXL
+  - _self_

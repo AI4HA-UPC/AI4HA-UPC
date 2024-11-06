@@ -1,0 +1,10 @@
+name: LSUNColon1DMDD
+train:
+  class: ai4ha.data.images.SUNColonF.SunDataset
+  params:
+    size: 480
+    data_csv: /data/LSUNColonDD/LSUNColon_images.txt
+    mask_csv: /data/LSUNColonDD/LSUNColon_masks.txt
+    data_root: /sunraw/
+    augmentation: false
+  mask_channels: 1

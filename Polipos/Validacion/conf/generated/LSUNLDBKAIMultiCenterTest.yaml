@@ -1,0 +1,16 @@
+name: LSUNLDBKAIMultiCenterTest
+train:
+  class: ai4ha.data.images.SUNPlusDataset.ExamplesTest
+  params:
+    size: 480
+    dataset_dir: 
+      - /MultiCenterData/
+      - /bkai/
+      - /LDPolyp/test/images
+    data_csv: 
+      - /MultiCenterData/multi.txt
+      - /bkai/bkai_test.txt
+      - /LDPolyp/LDPolip_test.txt
+    data_root: /
+    interpolation: bicubic
+    augmentation: false

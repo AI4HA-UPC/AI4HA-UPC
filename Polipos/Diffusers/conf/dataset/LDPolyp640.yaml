@@ -1,0 +1,7 @@
+name: LDPolyp640
+train:
+  class: ai4ha.data.images.LDPolyp.LDPolypGenDataset
+  params:
+    data_root: /LDPolyp640
+    size: 640
+  mask_channels: 1

@@ -1,0 +1,3 @@
+type: AEKL
+lib: diffusers
+model: /sd-vae-ft-ema

@@ -1,0 +1,20 @@
+modeltype: UNET2
+params:
+  sample_size: 40
+  in_channels: 6
+  out_channels: 6
+  down_block_types:
+  - DownBlock2D
+  - DownBlock2D
+  - DownBlock2D
+  up_block_types:
+  - UpBlock2D
+  - UpBlock2D
+  - UpBlock2D
+  block_out_channels:
+  - 256
+  - 512
+  - 1024
+  layers_per_block: 3
+image_key: image
+segmentation: 2

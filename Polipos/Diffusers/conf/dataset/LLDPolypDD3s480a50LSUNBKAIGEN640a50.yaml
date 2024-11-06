@@ -1,0 +1,37 @@
+name: LLDPolypDD3s480a50LSUNBKAIGEN640a50
+norm: SUNBKAIPGen
+train:
+  params:
+    model: SDXLVAEEMA
+    size: 640
+    encoder: VAE80
+train1:
+  class: ai4ha.data.images.VAEDataset.VAEDataset
+  sample_size: 60
+  params:
+    model: SDXLVAEEMA
+    size: 480
+    encoder: VAE60
+    data_root: /
+    datasets: 
+     - LDPolypDD3
+    normalization: 1.0
+    segmentation: true
+    augmentation: true
+    augprob: 0.5
+train2:
+  class: ai4ha.data.images.VAEDataset.VAEDataset
+  sample_size: 80
+  params:
+    model: SDXLVAEEMA
+    size: 640
+    encoder: VAE80
+    data_root: /
+    datasets:
+      - SUNcolon1DMp
+      - MultiCenterData640
+      - bkai640
+    normalization: 1.0
+    segmentation: true
+    augmentation: true
+    augprob: 0.5

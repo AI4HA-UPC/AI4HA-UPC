@@ -1,0 +1,11 @@
+name: LLDPolypBKAIs480a0DDPMZ400
+train:
+  class: ai4ha.data.images.GeneratedDataset.GeneratedDataset
+  params:
+    data_root: /PolypGenerated
+    dataset: LDPolypBKAI
+    size: 480
+    aug: 0
+    steps: DDPMZ-400
+    bbox: false
+    mask: false
