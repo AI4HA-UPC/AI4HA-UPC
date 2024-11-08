@@ -1,0 +1,2 @@
+loss: WGAN-GP
+lambda_gp: 10

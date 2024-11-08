@@ -1,0 +1,12 @@
+name: DDPM-t1000-b5-2-linear-zsnr
+type: DDPM
+prediction_type: sample
+num_steps: 1000
+num_inference_steps: 1000
+beta_schedule: linear
+betas:
+- 1.0e-05
+- 1.0e-02
+variance_type: fixed_small
+clip_sample: false
+rescale_betas_zero_snr: true

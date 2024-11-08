@@ -1,0 +1,20 @@
+name: ECG_PTBXL-Mondrian5511-zero
+nclasses: 8
+train1:
+  class: ai4ha.data.series.ECGDataset.ECGDataset
+  params:
+    dir: /PTBXL
+    dataset: train
+    padding: 24
+    padalgo: zero
+train2:
+  class: ai4ha.data.series.TimeMondrianDataset.TimeMondrianDataset
+  params:
+    dir: /Mondrian
+    classes: 7
+    sampling: 1000
+    cp: 0.5
+    cd: 0.5
+    sigma: 11
+    padding: 24
+    padalgo: zero

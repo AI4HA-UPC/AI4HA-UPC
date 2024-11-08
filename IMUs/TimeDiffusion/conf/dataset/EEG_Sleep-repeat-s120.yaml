@@ -1,0 +1,9 @@
+name: EEG_Sleep-repeat-s120
+nclasses: 5
+train:
+  class: ai4ha.data.series.SleepDataset.SleepDataset
+  params:
+    dir: /Sleep
+    dataset: train
+    padding: 120
+    padalgo: repeat-s

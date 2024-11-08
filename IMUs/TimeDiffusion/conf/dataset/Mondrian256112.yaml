@@ -1,0 +1,13 @@
+name: Mondrian256112
+nclasses: 1
+train:
+  class: ai4ha.data.series.TimeMondrianDataset.TimeMondrianDataset
+  params:
+    dir: /Mondrian
+    classes: 0
+    sampling: 256
+    cp: 0.1
+    cd: 0.1
+    sigma: 2
+    norm: True
+

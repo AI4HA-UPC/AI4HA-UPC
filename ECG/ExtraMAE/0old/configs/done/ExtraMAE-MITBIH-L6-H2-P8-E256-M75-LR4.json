@@ -1,0 +1,80 @@
+{
+    "name": "ExtraMAE-MITBIH-L6-H2-P8-E256-M75-LR4",
+    "exp_dir": "/misiones/Series/Models/ExtraMAE",
+    "ema":{
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay":0.9999
+    },
+    "model": {
+        "in_channels": 1,
+        "series_length": 192,
+        "mask_percent": 0.75,
+        "layers":6,
+        "heads":2,
+        "embed_dim":256,
+        "patch_size":8
+    },
+
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 1,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-4,
+        "lr_warmup_steps": 100,
+        "epochs": 10000,
+        "checkpoint_freq": 2000,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L2"
+    },
+    "samples": {
+        "samples_freq": 25,
+        "samples_num": 20,
+        "samples_gen": 1000
+    },
+
+    "dataset": {
+        "name": "EBHI",
+        "nclasses":5,
+        "train": {
+            "class":"ai4ha.data.series.MITBIHDataLoader.MITBIHtrain",
+            "params":{
+                "filename": "/MITBIH/mitbih_train.csv",
+                "n_samples": 2000,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 192,
+                "normalize": false
+            }
+        },
+
+        "test":{ 
+            "class": "ai4ha.data.series.MITBIHDataLoader.MITBIHtest",
+            "params":{
+                "filename": "/MITBIH/mitbih_test.csv",
+                "n_samples": 100,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 192,
+                "normalize": false
+            }
+        },
+        "dataloader":{
+            "batch_size": 512,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 12
+}

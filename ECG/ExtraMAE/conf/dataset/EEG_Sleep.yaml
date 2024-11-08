@@ -1,0 +1,10 @@
+name: EEG_Sleep
+nclasses: 5
+train:
+  class: ai4ha.data.series.SleepDataset.SleepDataset
+  params:
+    dir: /Sleep
+    dataset: train
+    padding: 0
+    padalgo: null
+    norm: null

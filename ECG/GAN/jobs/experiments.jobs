@@ -1,0 +1,6 @@
+# +dataset=MITBIH-zero +generator=MITBIH-TTSGAN-NL3-LD256-DE128-CE10-H8-DR05 +discriminator=MITBIH-TTSGAN-NL3-P16-DE64-CE10-H8-D0 +loss=WGAN-GP1
+# +dataset=PTBXLC-zero +generator=PTBXLC-TTSGAN-NL4-LD256-DE256-CE16-H8-DR02 +discriminator=PTBXLC-TTSGAN-NL4-P4-DE128-CE16-H8-D0 +loss=WGAN-GP5 dataloader=batch8
+# +dataset=PTBXLC-zero +generator=PTBXLC-TTSGAN-NL4-LD256-DE256-CE16-H8-DR05 +discriminator=PTBXLC-TTSGAN-NL3-P8-DE64-CE16-H4-D0 +loss=WGAN-GP1 dataloader=batch8
+# +dataset=PTBXLC-zero +generator=PTBXLC-TTSGAN-NL4-LD256-DE256-CE16-H8-DR05 +discriminator=PTBXLC-TTSGAN-NL2-P4-DE64-CE10-H8-D0 +loss=WGAN-GP1 dataloader=batch8
+# +dataset=PTBXLC-zero +generator=PTBXLC-TTSGAN-NL4-LD512-DE512-CE16-H4-DR05 +discriminator=PTBXLC-TTSGAN-NL2-P4-DE64-CE10-H8-D0 +loss=WGAN-GP1 dataloader=batch8
+# +dataset=PTBXLC-zero +generator=PTBXLC-TTSGAN-NL4-LD512-DE512-CE16-H4-DR05 +discriminator=PTBXLC-TTSGAN-NL4-P8-DE64-CE10-H8-D0-AP dataloader=batch8 +loss=WGAN-GP1 

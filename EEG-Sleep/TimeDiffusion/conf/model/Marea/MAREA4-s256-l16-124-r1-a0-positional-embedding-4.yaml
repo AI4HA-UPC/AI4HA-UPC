@@ -1,0 +1,27 @@
+modeltype: UNET1C
+params:
+  sample_size: 256
+  in_channels: 9
+  out_channels: 9
+  down_block_types:
+  - DownBlock1D
+  - DownBlock1D
+  - DownBlock1D
+  up_block_types:
+  - UpBlock1D
+  - UpBlock1D
+  - UpBlock1D
+  block_out_channels:
+  - 16
+  - 32
+  - 64
+  time_embedding_type: positional
+  layers_per_block: 1
+  class_embed_type: embedding
+  num_class_embeds: 4
+  extra_in_channels: 4
+class_append: true
+ema:
+  inv_gamma: 1.0
+  power: 0.75
+  max_decay: 0.9999

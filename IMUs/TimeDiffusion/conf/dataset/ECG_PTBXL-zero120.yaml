@@ -1,0 +1,9 @@
+name: ECG_PTBXL-zero120
+nclasses: 7
+train:
+  class: ai4ha.data.series.ECGDataset.ECGDataset
+  params:
+    dir: /PTBXL
+    dataset: train
+    padding: 120
+    padalgo: zero

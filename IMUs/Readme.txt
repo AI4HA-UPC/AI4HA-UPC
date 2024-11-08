@@ -1,0 +1,1 @@
+Caso de uso: Generación de datos sintéticos de IMUs

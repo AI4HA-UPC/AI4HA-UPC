@@ -1,0 +1,35 @@
+name: MAREA4-512-512        
+nclasses: 4
+train:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 512
+    window: 512
+    dataset: train
+    padding: 0
+    padalgo: null
+    norm: True
+test:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 512
+    window: 512
+    dataset: test
+    padding: 0
+    padalgo: null
+    norm: True
+val:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 512
+    window: 512
+    dataset: val
+    padding: 0
+    padalgo: null
+    norm: True

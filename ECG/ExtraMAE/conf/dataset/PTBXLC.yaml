@@ -1,0 +1,14 @@
+name: PTBXLC
+nclasses: 7
+train:
+  class: ai4ha.data.series.PTBXLDataLoader.PTBXLtrain
+  params:
+    dir: /ptbxl_c
+    padding: 0
+    padalgo: null
+test:
+  class: ai4ha.data.series.PTBXLDataLoader.PTBXLtrain
+  params:
+    dir: /ptbxl_c
+    padding: 0
+    padalgo: null

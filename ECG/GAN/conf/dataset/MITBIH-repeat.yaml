@@ -1,0 +1,22 @@
+name: MITBIH-repeat
+nclasses: 5
+train:
+  class: ai4ha.data.series.MITBIHDataLoader.MITBIHtrain
+  params:
+    filename: /MITBIH/mitbih_train.csv
+    n_samples: 2000
+    resamp: false
+    oneD: true
+    padding: 5
+    padalgo: repeat
+    normalize: false
+test:
+  class: ai4ha.data.series.MITBIHDataLoader.MITBIHtest
+  params:
+    filename: /MITBIH/mitbih_test.csv
+    n_samples: 100
+    resamp: false
+    oneD: true
+    padding: 5
+    padalgo: repeat
+    normalize: false

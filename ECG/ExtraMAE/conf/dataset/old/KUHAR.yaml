@@ -1,0 +1,16 @@
+name: KUHAR
+nclasses: 18
+train:
+  class: ai4ha.data.series.KUHARDataLoader.KUHARtrain
+  params:
+    filename: /KU-HAR/KU-HAR.csv
+    channels: 6
+    padding: 0
+    padalgo: zero
+test:
+  class: ai4ha.data.series.KUHARDataLoader.KUHARtrain
+  params:
+    filename: /KU-HAR/KU-HAR.csv
+    channels: 6
+    padding: 0
+    padalgo: zero

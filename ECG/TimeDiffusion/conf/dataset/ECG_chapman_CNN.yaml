@@ -1,0 +1,8 @@
+name: ECG_chapman_CNN
+nclasses: 7
+train:
+  class: ai4ha.data.series.ECGFeaturesDataset.ECGFeaturesDataset
+  params:
+    dir: /ECG_features
+    dataset: experiment_CHAPMAN_1dcnn_real_TrRTeR_full_CHAPMAN_features
+    norm: false

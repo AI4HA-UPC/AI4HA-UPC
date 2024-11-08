@@ -1,0 +1,11 @@
+name: ECG_PTBXL-zero-Rsmooth10000
+nclasses: 7
+train:
+  class: ai4ha.data.series.ECGDataset.ECGDataset
+  params:
+    dir: /PTBXL
+    dataset: train
+    padding: 24
+    padalgo: zero
+    sampling_smoothing: reverse
+    sampling_smoothing_value: 10000

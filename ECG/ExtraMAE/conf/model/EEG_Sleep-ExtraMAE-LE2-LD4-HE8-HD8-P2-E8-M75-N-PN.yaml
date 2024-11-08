@@ -1,0 +1,12 @@
+modeltype: ExtraMAE
+in_channels: 1
+series_length: 3000
+mask_percent: 0.75
+layers_encoder: 2
+heads_encoder: 8
+layers_decoder: 4
+heads_decoder: 8
+embed_dim: 8
+patch_size: 2
+norm_layer: True
+patcher: normal

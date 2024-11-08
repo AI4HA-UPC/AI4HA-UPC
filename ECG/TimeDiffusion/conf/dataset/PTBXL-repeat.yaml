@@ -1,0 +1,14 @@
+name: PTBXL-repeat
+nclasses: 12
+train:
+  class: ai4ha.data.series.PTBXLDataLoader.PTBXLtrain
+  params:
+    dir: /ptbxl
+    padding: 24
+    padalgo: repeat
+test:
+  class: ai4ha.data.series.PTBXLDataLoader.PTBXLtrain
+  params:
+    dir: /ptbxl
+    padding: 24
+    padalgo: repeat

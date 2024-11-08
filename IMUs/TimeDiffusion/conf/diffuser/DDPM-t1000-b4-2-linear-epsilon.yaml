@@ -1,0 +1,11 @@
+name: DDPM-t1000-b4-2-linear-epsilon
+type: DDPM
+prediction_type: epsilon
+num_steps: 1000
+num_inference_steps: 1000
+beta_schedule: linear
+betas:
+- 0.0001
+- 0.01
+variance_type: fixed_small
+clip_sample: false

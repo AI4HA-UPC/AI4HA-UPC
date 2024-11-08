@@ -1,0 +1,9 @@
+name: EEG_Sleep-all-mirror136
+nclasses: 5
+train:
+  class: ai4ha.data.series.SleepDataset.SleepDataset
+  params:
+    dir: /Sleep
+    dataset: all
+    padding: 136
+    padalgo: mirror

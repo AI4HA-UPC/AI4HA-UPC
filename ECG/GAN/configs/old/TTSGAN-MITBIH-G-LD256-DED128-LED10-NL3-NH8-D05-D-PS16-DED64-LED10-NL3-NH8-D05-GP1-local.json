@@ -1,0 +1,107 @@
+{
+    "name": "TTSGAN-MITBIH-G-LD256-DED128-LED10-NL3-NH8-D05-D-PS16-DED64-LED10-NL3-NH8-D05-GP1-local",
+    "exp_dir": "/home/bejar/bsc/misiones/Series/Models/GAN/",
+    "model": {
+        "generator": {
+            "class": "ai4ha.GAN.Generators.TTSGANGenerator",
+            "latent_dim":[256],
+            "params": {
+                "latent_dim":256,
+                "seq_length":256,
+                "seq_channels":1,
+                "n_classes":5,
+                "data_embed_dim":128,
+                "label_embed_dim":10,
+                "n_layers":3,
+                "num_heads":8,
+                "dropout_rate":0.5
+            }
+        },
+        "discriminator": {
+            "class": "ai4ha.GAN.Discriminators.TTSGANDiscriminator",
+            "params": {
+                "seq_length":256,
+                "seq_channels":1,
+                "n_classes":5,
+                "patch_size":16,
+                "data_embed_dim":64,
+                "label_embed_dim":10,
+                "n_layers":3,
+                "num_heads":8,
+                "dropout_rate":0.5
+            }
+        }
+    },
+    "optimizer": {
+        "lr": 0.0002,
+        "beta1": 0.5,
+        "beta2": 0.999
+    },
+    "scheduler": {
+        "step_size": 30,
+        "gamma": 0.1
+    },
+    "train": {
+        "batch_size": 64,
+        "num_epochs": 500,
+        "log_interval": 10,
+        "save_interval": 10,
+        "lr_warmup_steps": 10,
+        "lambda_gp": 1,
+        "checkpoint_epoch_freq":10,
+        "best_model": true
+    },
+    "data": {
+        "path": "data/processed/"
+    },
+    "ema": {
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay": 0.9999
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 1,
+        "mixed_precision": "no",
+        "log_with": "wandb"
+    },
+    "samples": {
+        "samples_freq": 25,
+        "samples_num": 20,
+        "samples_gen": 1000
+    },
+    "dataset": {
+        "name": "EBHI",
+        "nclasses": 5,
+        "train": {
+            "class": "ai4ha.data.series.MITBIHDataLoader.MITBIHtrain",
+            "params": {
+                "filename": "/home/bejar/ssdstorage/MITBIH/mitbih_train.csv",
+                "n_samples": 2000,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 256,
+                "normalize": false
+            }
+        },
+        "test": {
+            "class": "ai4ha.data.series.MITBIHDataLoader.MITBIHtest",
+            "params": {
+                "filename": "/home/bejar/ssdstorage/MITBIH/mitbih_test.csv",
+                "n_samples": 100,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 256,
+                "normalize": false
+            }
+        },
+        "dataloader": {
+            "batch_size": 128,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 12
+}

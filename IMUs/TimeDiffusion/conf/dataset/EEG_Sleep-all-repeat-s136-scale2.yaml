@@ -1,0 +1,10 @@
+name: EEG_Sleep-all-repeat-s136-scale2
+nclasses: 5
+train:
+  class: ai4ha.data.series.SleepDataset.SleepDataset
+  params:
+    dir: /Sleep
+    dataset: all
+    padding: 136
+    padalgo: repeat-s
+    norm: scale2

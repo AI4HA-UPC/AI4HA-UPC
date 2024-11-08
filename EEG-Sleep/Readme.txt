@@ -1,0 +1,1 @@
+Caso de uso: Geneación de datos sintéticos de EEG en pruebas de sueño

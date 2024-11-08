@@ -1,0 +1,81 @@
+# +dataset=MITBIH-zero +model=MITBIH-ExtraMAE-L6-H2-P10-E256-M75
+# +dataset=PTBXLC +model=PTBXLC-ExtraMAE-L6-H2-P10-E256-M75
+#+model=PTBXLC-ExtraMAE-L4-H8-P10-E64-M50-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L1-H8-P10-E64-M50-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L3-H8-P10-E64-M50-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L5-H8-P10-E64-M50-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L4-H8-P10-E64-M75-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L5-H8-P10-E64-M75-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L4-H8-P10-E32-M75-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=PTBXLC-ExtraMAE-L4-H8-P10-E32-M50-N-PN +dataset=PTBXLC optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=MAREA-ExtraMAE-L4-H8-P16-E32-M50-N-PN +dataset=MAREA256 optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=MAREA-ExtraMAE-L4-H8-P16-E64-M75-N-PN +dataset=MAREA256NN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+#+model=MAREA-ExtraMAE-L6-H8-P16-E64-M50-N-PN +dataset=MAREA256NN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1
+# 2024-10-07 Testing with Sleep data 
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE2-LD6-HE8-HD8-P15-E32-M75-N-PN optimizer=adamw-lr4 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+# 2024-10-15 Testing with Sleep data 
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE2-LD6-HE8-HD8-P15-E32-M75-N-PN optimizer=adamw-lr4 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE3-LD5-HE8-HD8-P30-E16-M75-N-PN optimizer=adamw-lr4 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE2-LD6-HE8-HD8-P15-E32-M75-N-PN optimizer=adamw-lr5 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE3-LD5-HE8-HD8-P30-E16-M75-N-PN optimizer=adamw-lr5 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+# 2024-10-16 Testing with Sleep data 
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE2-LD6-HE8-HD8-P15-E32-M75-N-PN optimizer=adamw-lr2 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE2-LD6-HE8-HD8-P15-E32-M75-N-PN optimizer=adamw-lr3 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE3-LD5-HE8-HD8-P30-E16-M75-N-PN optimizer=adamw-lr2 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE3-LD5-HE8-HD8-P30-E16-M75-N-PN optimizer=adamw-lr3 lr_scheduler=cosine-w100 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P30-E16-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P60-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE3-LD6-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE5-LD5-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE6-LD6-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+# 2024-10-23 More configurations
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE7-LD7-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE8-LD8-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE6-LD6-HE8-HD8-P150-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE6-LD6-HE8-HD8-P200-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 loss=L1 dataloader=batch32
+# 2024-10-24 More configurations
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P200-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P200-E128-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P200-E64-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P200-E128-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+# 2024-10-24 More configurations
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P100-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P100-E32-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+# 2024-10-24 More configurations
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P50-E32-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P25-E32-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P50-E32-M25-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P50-E32-M10-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P50-E16-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD4-HE4-HD4-P50-E64-M50-N-PN optimizer=adamw-lr3 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+# 2024-11-05 More configurations
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P50-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P25-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P50-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P50-E64-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD9-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD10-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P50-E128-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+#+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P100-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P15-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E64-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P5-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD6-HE8-HD8-P10-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L1 dataloader=batch32
+# 2024-11-08 Using MSE and unscaled data
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E64-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E32-M50-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P5-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+@+dataset=EEG_Sleep-scale2 +model=EEG_Sleep-ExtraMAE-LE4-LD6-HE8-HD8-P10-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32
+@+dataset=EEG_Sleep +model=EEG_Sleep-ExtraMAE-LE4-LD8-HE8-HD8-P10-E32-M25-N-PN optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.05-p50 loss=L2 dataloader=batch32

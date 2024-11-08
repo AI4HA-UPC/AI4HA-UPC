@@ -1,0 +1,45 @@
+name: MAREA4-256-256Mondrian112
+nclasses: 5
+train1:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 256
+    window: 256
+    dataset: train
+    padding: 0
+    padalgo: null
+    norm: True
+train2:
+  class: ai4ha.data.series.TimeMondrianDataset.TimeMondrianDataset
+  params:
+    dir: /Mondrian
+    classes: 4
+    sampling: 256
+    cp: 0.1
+    cd: 0.1
+    sigma: 2
+    norm: True
+test:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 256
+    window: 256
+    dataset: test
+    padding: 0
+    padalgo: null
+    norm: True
+val:
+  class: ai4ha.data.series.MareaDataLoader.MareaDataset
+  params:
+    dir: /Marea
+    classes: 4
+    sampling: 256
+    window: 256
+    dataset: val
+    padding: 0
+    padalgo: null
+    norm: True

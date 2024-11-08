@@ -1,0 +1,15 @@
+modeltype: TTSGAN
+class: ai4ha.GAN.Generators.TTSGANGenerator
+latent_dim:
+- 256
+params:
+  latent_dim: 256
+  seq_length: 1024
+  seq_channels: 12
+  n_classes: 7
+  data_embed_dim: 128
+  class_embed_dim: 10
+  n_layers: 3
+  num_heads: 8
+  dropout_rate: 0.5
+  pos_encodings: False

@@ -1,0 +1,12 @@
+modeltype: TTSGAN
+class: ai4ha.GAN.Discriminators.TTSGANDiscriminator
+params:
+  seq_length: 1024
+  seq_channels: 12
+  n_classes: 7
+  patch_size: 8
+  data_embed_dim: 64
+  class_embed_dim: 16
+  n_layers: 3
+  num_heads: 4
+  dropout_rate: 0.0

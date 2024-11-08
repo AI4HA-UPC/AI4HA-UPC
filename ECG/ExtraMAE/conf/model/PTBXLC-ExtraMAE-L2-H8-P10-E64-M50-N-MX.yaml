@@ -1,0 +1,10 @@
+modeltype: ExtraMAE
+in_channels: 12
+series_length: 1000
+mask_percent: 0.5
+layers: 2
+heads: 8
+embed_dim: 64
+patch_size: 10
+norm_layer: True
+patcher: mix

@@ -1,0 +1,12 @@
+name: DDPM-t250-b4-22-linear
+type: DDPM
+prediction_type: sample
+num_steps: 250
+num_inference_steps: 250
+beta_schedule: linear
+betas:
+- 1.0e-04
+- 2.0e-02
+variance_type: fixed_small
+clip_sample: false
+rescale_betas_zero_snr: true

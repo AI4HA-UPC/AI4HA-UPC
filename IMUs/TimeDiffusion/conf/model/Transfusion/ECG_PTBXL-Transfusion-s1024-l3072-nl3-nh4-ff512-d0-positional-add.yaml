@@ -1,0 +1,13 @@
+modeltype: Transfusion
+params:
+    sample_size: 1024
+    in_channels: 12
+    latent_dim: 3072
+    num_heads: 4
+    num_layers: 3
+    dropout: 0
+    activation: gelu
+    ff_size: 512
+    time_embedding_type: positional
+    num_class_embeds: 7
+    time_class_comb: add  

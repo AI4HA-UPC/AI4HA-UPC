@@ -1,0 +1,12 @@
+modeltype: WaveGAN
+class: ai4ha.GAN.Discriminators.WaveGANDiscriminator
+params:
+  input_size: 256
+  input_channels: 1
+  n_layers: 5
+  init_channels: 16
+  kernel_size: 16
+  stride: 2
+  shift_factor: 0
+  n_classes: 5
+  sp_norm: true

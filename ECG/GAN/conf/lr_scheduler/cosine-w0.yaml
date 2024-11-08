@@ -1,0 +1,4 @@
+type: cosine
+lr_warmup_steps: 0
+step_size: 30
+gamma: 0.1

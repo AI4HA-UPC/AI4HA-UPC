@@ -1,0 +1,96 @@
+{
+    "name": "EBHI-DDPM-CC-s128-l32-124-r3-t1000-cos-lr5",
+    "exp_dir": "/gpfs/projects/bsc70/bsc70642/misiones/Imagenes/Modelos/DenoisingDiffusion/Diffusers",
+    "model": {
+        "modeltype": "UNET2",
+        "params": {
+            "sample_size": 128,
+            "in_channels": 3,
+            "out_channels": 3,
+            "down_block_types": [ 
+                "DownBlock2D",
+                "DownBlock2D",
+                "DownBlock2D"
+            ],
+            "up_block_types": [
+                "UpBlock2D",
+                "UpBlock2D",
+                "UpBlock2D"
+            ],
+            "block_out_channels": [
+                32, 64, 128 
+            ],
+            "layers_per_block": 3,
+            "class_embed_type": "timestep",
+            "num_class_embeds": 6
+        }
+    },
+    "ema":{
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay":0.9999
+    },
+    "diffuser":{
+        "type":"DDPM",
+        "prediction_type": "epsilon",
+        "num_steps": 1000,
+        "num_inference_steps": 1000,
+        "beta_schedule":"squaredcos_cap_v2"
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 4,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-5,
+        "lr_warmup_steps": 100,
+        "epochs": 100000,
+        "checkpoint_freq": 500,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L1"
+    },
+    "samples": {
+        "samples_freq": 500,
+        "samples_gen": 100
+    },
+
+    "dataset": {
+        "name": "EBHI",
+        "nclasses":6,
+        "train": {
+            "class":"diffusion.data.EBHIclass.ExamplesTrain",
+            "params":{
+                "size": 128,
+                "data_csv": "/data/EBHI-SEG/EBHI-SEG-train.txt",
+                "data_root": "/data/",
+                "augmentation": true
+            }
+        },
+
+        "test":{ 
+            "class": "diffusion.data.EBHIclass.ExamplesTest",
+            "params":{
+                "size": 128,
+                "data_csv": "/data/EBHI-SEG/EBHI-SEG-test.txt",
+                "data_root": "/data/"
+
+            }
+        },
+        "dataloader":{
+            "batch_size": 1,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 47
+}

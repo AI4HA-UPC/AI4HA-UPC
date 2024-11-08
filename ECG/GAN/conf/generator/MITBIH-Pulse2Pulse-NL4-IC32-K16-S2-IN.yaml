@@ -1,0 +1,14 @@
+modeltype: Pulse2Pulse
+class: ai4ha.GAN.Generators.Pulse2PulseGANGenerator
+latent_dim:
+- 1
+- 256
+params:
+  seq_length: 256
+  seq_channels: 1
+  init_channels: 32
+  n_layers: 4
+  kernel_size: 16
+  stride: 2
+  normalization: instance
+  n_classes: 5

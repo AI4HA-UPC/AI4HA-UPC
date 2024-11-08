@@ -1,0 +1,27 @@
+exp_dir: /misiones/Series/Models/GAN/
+local: false
+projectconf:
+  total_limit: 2
+accelerator:
+  gradient_accumulation_steps: 1
+  mixed_precision: 'no'
+  log_with: wandb
+samples:
+  samples_freq: 10
+  samples_num: 250
+  samples_gen: 10000
+train:
+  num_epochs: 5000
+  log_interval: 10
+  save_interval: 10
+  checkpoint_freq: 2000
+  checkpoint_epoch_freq: 10
+  best_model: true
+  conditional: true
+time: 12
+
+defaults:
+  - optimizer: adamw-lr4
+  - dataloader: batch64
+  - lr_scheduler: cosine-w100
+  - _self_

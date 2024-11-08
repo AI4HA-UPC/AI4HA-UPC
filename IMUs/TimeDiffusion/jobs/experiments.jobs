@@ -1,0 +1,318 @@
+# +dataset=PTBXLC-repeat +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=PTBXLC-s1024-l128-124-r1-a1-positional-embedding-c dataloader=batch64
+# +dataset=PTBXLC-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=PTBXLC-s1024-l128-124-r1-a1-positional-embedding-c dataloader=batch64
+# +dataset=PTBXLC-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 lr_scheduler=cosine-w100 +model=PTBXLC-s1024-l128-124-r2-a1-positional-embedding-12
+# +dataset=MAREA4-256-256-Mondrian +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch64
+# +dataset=MAREA4-256-256-Mondrian +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch64
+# +dataset=MAREA4-256-256-Mondrian225 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-256-Mondrian337 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian225 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian337 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian449 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian5511 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian225 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian337 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian449 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian5511 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a1-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r2-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r1-a1-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-124-r2-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r1-a0-fourier-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r1-a1-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r2-a1-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r2-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-124-r2-a2-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4-s256-l16-1248-r1-a0-positional-embedding-4 dataloader=batch128
+# +dataset=MAREA4-256-64-Mondrian112 +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=MAREA4M-s256-l16-1248-r1-a0-positional-embedding-4 dataloader=batch128
+#
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l256-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l128-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l64-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-cosine-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-cosine optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t2000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t2000-b4-2-cosine-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-cosine-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r2-a1-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-cosine-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r2-a1-positional-embedding-6 dataloader=batch128
+#
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l2048-nl6-nh8-ff512-fourier dataloader=batch64 
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l2048-nl6-nh8-ff512-positional dataloader=batch64 
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l2048-nl6-nh8-ff1024-positional dataloader=batch64 
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l2048-nl6-nh16-ff512-positional dataloader=batch64 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l3072-nl6-nh8-ff512-positional dataloader=batch64 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l3072-nl2-nh4-ff512-d0-positional-add dataloader=batch128 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l3072-nl3-nh4-ff512-d0-positional-add dataloader=batch128 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l3072-nl4-nh4-ff512-d0-positional-add dataloader=batch96 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l3072-nl4-nh16-ff1024-d01-positional-add dataloader=batch96 samples.sample_time=20 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l1024-nl8-nh8-ff1024-d01-positional-concat dataloader=batch64 samples.sample_time=15 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l1024-nl6-nh16-ff1024-d01-positional-concat dataloader=batch64 samples.sample_time=15 samples.samples_gen=2000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-Transfusion-s1024-l1024-nl8-nh16-ff1024-d01-positional-concat dataloader=batch64 samples.sample_time=15 samples.samples_gen=2000
+#
+#+dataset=ECG_PTBXL_CNN +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_CNN_PTBXL-s384-l16-124-r3-a1-positional-embedding-6 dataloader=batch256
+#+dataset=ECG_PTBXL_CNN +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_CNN_PTBXL-s384-l16-124-r4-a1-positional-embedding-3 dataloader=batch256
+#+dataset=ECG_PTBXL_CNN +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr5 +model=ECG_CNN_PTBXL-s384-l16-124-r3-a1-positional-embedding-3 dataloader=batch256 
+#+dataset=ECG_PTBXL_CNN +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_CNN_PTBXL-s384-l16-124-r3-a1-positional-embedding-9 dataloader=batch256
+#+dataset=ECG_PTBXL_CNN +diffuser=DDPM-t1000-b4-2-linear optimizer=adamw-lr4 +model=ECG_CNN_PTBXL-s384-l8-1244-r3-a1-positional-embedding-3 dataloader=batch256
+# 2024-07-23 Chapman
+#+dataset=ECG_chapman-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r2-a1-positional-embedding-6 dataloader=batch128 samples.samples_gen=4000
+# 2024-07-25 Chapman with lower learning rate
+#+dataset=ECG_chapman-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=ECG_PTBXL-s1024-l32-124-r2-a1-positional-embedding-6 dataloader=batch128 samples.samples_gen=10000
+# 2024-07-25 PTBXL different combinations
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r2-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r3-a1-positional-embedding-6 dataloader=batch128
+# 2024-07-26 More combinations for PTBXL, double attention seems to be good
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r3-a2-positional-embedding-6 dataloader=batch128
+# 2024-07-28 Chapman for the best model of PTBXL - more experiments for PTBXL
+#+dataset=ECG_chapman-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r3-a2-positional-embedding-6 dataloader=batch128 samples.samples_gen=1000
+#+dataset=ECG_chapman-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r1-a2-positional-embedding-6 dataloader=batch128 samples.samples_gen=1000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r1-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128
+# 2024-08-07 More residual layers for PTBXL
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r4-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r5-a2-positional-embedding-6 dataloader=batch128
+# 2024-08-13 More residual layers for 1248
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r4-a2-positional-embedding-6 dataloader=batch128
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r5-a2-positional-embedding-6 dataloader=batch128
+# Training Chapman 1248 R3 A2 model
+#+dataset=ECG_chapman-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128
+# 2024-08-24 training PTBXL 1248 R3 A2 model for 50000 epochs
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 
+# 2024-08-26 Testing oversampling of classes based on the inverse frequency smoothed by 5000, 2500 and 10000
+#+dataset=ECG_PTBXL-zero-Rsmooth5000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth2500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth10000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-08-27 Testing PTBXL with mondrian data
+#+dataset=ECG_PTBXL-Mondrian-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-Mondrian-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 samples.samples_gen=10
+# 2024-08-28 oversamoling with inverse smoothed frequency 1000, 500 and direct smoothing 250, 500 and 1000
+#+dataset=ECG_PTBXL-zero-Rsmooth500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth1000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth250 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth1000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-08-28 Testing PTBXL with reduced learning rate for 50000 epochs and PTBXL with Mondrian5511 data
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 
+#+dataset=ECG_PTBXL-Mondrian5511-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-Mondrian-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 samples.samples_gen=10
+# 2024-08-29 Testing PTBXL oversampling with inverse smoothed frequency 50, 100
+#+dataset=ECG_PTBXL-zero-Rsmooth50 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth100 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth50 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-08-30 Testing PTBXL with minimal direct oversampling
+#+dataset=ECG_PTBXL-zero-Dsmooth20 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-08-30 Testing PTBXL with less complex mondrian data
+#+dataset=ECG_PTBXL-Mondrian05051-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-Mondrian-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=10000 samples.samples_gen=10
+# 2024-08-31 Testing PTBXL with oversamplings after fixing the bug in the oversampling
+#+dataset=ECG_PTBXL-zero-Rsmooth5000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth2500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth250 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth10000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth500 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth1000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth50 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth100 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth1000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth50 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Dsmooth20 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-03 Training EEG sleep data  and ECG with more oversampling
+#+dataset=EEG_Sleep-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-Rsmooth20000 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-05 Training EEG sleep data and PTBXL with repeat and mirror padding 
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-mirror +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-06 Training EEG sleep data repeat padding and different architectures, also random padding
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r5-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r3-a2-fourier-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-12248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-12448-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-random +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-1248-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3008-l32-124-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s +diffuser=DDPM-t2000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s +diffuser=DDPM-t1000-b4-2-cosine-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s56 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1056-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-08 Training PTBXL with reduced noises
+#+dataset=ECG_PTBXL-repeat-s120 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-repeat-s120 +diffuser=DDPM-t1000-b55-35-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat136 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-09 Training sleep with reduced noises
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-09 Training PTBXL with different padding strategies, noises and architectures
+#+dataset=ECG_PTBXL-repeat120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-3-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero +diffuser=DDPM-t1000-b4-35-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero-s152 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1152-l32-12448-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-12448-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-10 Training PTBXL with different noises
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b5-4-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b6-3-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b6-4-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b6-5-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-10 Training PTBXL with more different noises and more diffusion steps
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b3-1-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b2-1-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t4000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t4000-b4-2-linear optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-12 Training PTBXL with L1 loss 
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L1
+# 2024-09-12 Training PTBXL with 12448/1244816 and 3 attention layers
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-12448-r3-a3-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1244816-r3-a3-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+# 2024-09-12 Training PTBXL with more residual layers
+#+dataset=ECG_PTBXL-zero120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r5-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+# 2024-09-13 Training PTBXL with circular padding and doubling with mirroring
+#+dataset=ECG_PTBXL-circular-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-mirror-double +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s2000-l32-124-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-epsilon optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-124-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r8-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+# 2024-09-13 Training sleep with more residual layers and attention
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b5-3-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a3-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-14 Training PTBXL with more feature maps
+#+dataset=ECG_PTBXL-zero24 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l64-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#2024-09-14 Training Sleep with more noise and less attention layers
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a3-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a0-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#2024-09-14 Training Sleep with more noise and deeper network
+#+dataset=EEG_Sleep-repeat-s200 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-1244816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s200 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-124816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s328 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#2024-09-14 Training Sleep with more noise and deeper network
+#+dataset=EEG_Sleep-zero-s136 +diffuser=DDPM-t1000-b4-1-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-17 Sleep with different noises and architectures
+#+dataset=EEG_Sleep-repeat-s200 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-1244816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s200 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-124816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s328 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b5-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b6-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-19 Variations over the best model
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l64-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l128-12448-r6-a1-positional-embedding-6 dataloader=batch256 train.num_epochs=5000
+# 2024-09-19 Other PTBXL parameter variations
+#+dataset=ECG_PTBXL-zero120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-repeat120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-repeat-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-zero-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-repeat120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+#+dataset=ECG_PTBXL-repeat-s120 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r6-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000 loss=L2
+# 2024-09-20 Variations over the best model
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l16-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l8-12448-r6-a1-positional-embedding-6 dataloader=batch256 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12248-r6-a1-positional-embedding-6 dataloader=batch256 train.num_epochs=5000
+# 2024-09-21 Training Sleep with all the data 
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-23 Training Sleep with all the data 
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=100
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=100
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=300
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr6 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=300
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-10 dataloader=batch512 train.num_epochs=100
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l64-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=100
+#+dataset=EEG_Sleep-all-repeat-s136-norm +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l64-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-repeat-s136-norm +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l64-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-24 Training Sleep with all the data 
+#+dataset=EEG_Sleep-all-repeat-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr3 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-zero-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-random-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-repeat-s1096 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-repeat-s136-scale1 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-repeat-s136-scale2 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-repeat-s136-zscore +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-25 Checking Sleep with a one side mirror padding
+#+dataset=EEG_Sleep-all-mirror136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr6 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-26 Checking mirror padding with long padding and alternative activation functions
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6-mish dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6-gelu dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6-relu dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr7 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-26 Testing new noise schedule ranges
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r3-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s120 +diffuser=DDPM-t1000-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-09-26 Testing new noise schedule ranges with different learning rates
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr3 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr2 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr5 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s136 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3136-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-29 Testing new noise schedule range with deeper networks
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-1244816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-1244816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t2000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124816-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124816-r6-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-09-30 Shorter diffusion
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t750-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s200 +diffuser=DDPM-t750-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3200-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t750-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-122448-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t750-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-124488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-10-01 testing Shorter diffusion on PTBXL
+#+dataset=ECG_PTBXL-mirror-s120 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s120 +diffuser=DDPM-t750-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1120-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-10-01 Sleep with larger network
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t1000-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12481632-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12481632-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s1096 +diffuser=DDPM-t750-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s4096-l32-12481632-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-10-02 Sleep variations of the best model
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a2-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6-mish dataloader=batch512 train.num_epochs=5000
+# 2024-10-02 PTBXL with longer padding and deeper network
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t750-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t1000-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-10-03 Even shorter diffusion for PTBXL
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t250-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t500-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a0-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t250-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a0-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+#+dataset=EEG_Sleep-all-mirror-s328 +diffuser=DDPM-t250-b4-22-linear-zsnr optimizer=adamw-lr4 +model=EEG_Sleep-s3328-l32-1244488-r6-a1-positional-embedding-6 dataloader=batch512 train.num_epochs=5000
+# 2024-10-04 More PTBXL experiments
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r6-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r9-a1-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+#+dataset=ECG_PTBXL-mirror-s280 +diffuser=DDPM-t500-b6-24-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1280-l32-124488-r3-a0-positional-embedding-6 dataloader=batch128 train.num_epochs=5000
+# 2024-11-04 PRBXL-Chapman Experiments
++dataset=ECG_PTBChap-zero +diffuser=DDPM-t1000-b4-2-linear-zsnr optimizer=adamw-lr4 +model=ECG_PTBXL-s1024-l32-1248-r3-a2-positional-embedding-6 dataloader=batch128 train.num_epochs=5000

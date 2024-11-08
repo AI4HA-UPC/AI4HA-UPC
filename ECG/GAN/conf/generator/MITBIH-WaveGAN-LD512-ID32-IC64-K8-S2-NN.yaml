@@ -1,0 +1,14 @@
+modeltype: WaveGAN
+class: ai4ha.GAN.Generators.WaveGANGenerator
+latent_dim:
+- 512
+params:
+  latent_dim: 512
+  init_dim: 32
+  init_channels: 64
+  output_size: 256
+  output_channels: 1
+  kernel_size: 8
+  stride: 2
+  normalization: null
+  n_classes: 5
