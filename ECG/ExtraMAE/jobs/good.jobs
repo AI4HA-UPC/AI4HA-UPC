@@ -1,1 +1,0 @@
-+model=PTBXLC-ExtraMAE-L2-H8-P10-E64-M50-N-PN +dataset=PTBXLC  optimizer=adamw-lr4 lr_scheduler=plateau-min-f0.1 local=True loss=L1 
