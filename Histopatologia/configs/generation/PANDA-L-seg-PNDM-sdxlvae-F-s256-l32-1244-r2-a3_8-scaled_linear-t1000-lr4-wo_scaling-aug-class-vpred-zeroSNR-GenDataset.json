@@ -1,0 +1,43 @@
+{
+    "name": "PANDA-L-seg-PNDM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-vpred-zeroSNR",
+    "exp_dir": "/gpfs/projects/bsc70/bsc70174/PANDA_code",
+    "out_dir": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen/",
+    "model": {
+        "modeltype": "UNet2D",
+        "params": {
+            "in_channels": 8,
+            "out_channels": 8,
+            "class_embed_type": "timestep"
+        },
+        "image_key":"image",
+        "segmentation": 4
+    },
+    "latents":{
+        "type": "AEKL",
+        "lib":"diffusers",
+        "model": "/gpfs/projects/bsc70/bsc70174/Models/sdxl-vae-fp16-fix"
+    },
+    "diffuser":{
+        "type":"PNDM",
+        "pipeline": "PNDM",
+        "prediction_type": "v_prediction",
+        "num_steps": 1000,
+        "num_inference_steps": 50,
+        "beta_schedule": "scaled_linear",
+        "zero_terminal_snr": true
+    },
+    "train": {
+        "learning_rate": 1e-4,
+        "lr_warmup_steps": 100,
+        "epochs": 100000,
+        "checkpoint_freq": 500,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L2"
+    },
+    "samples": {
+
+    },
+    "time": 47,
+    "batch": 4,
+    "nsamples": 6672
+}

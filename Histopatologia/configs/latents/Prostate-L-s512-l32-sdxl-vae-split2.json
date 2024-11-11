@@ -1,0 +1,46 @@
+{
+    "name": "Prostate-L-s512-l32-sdxl-vae-split2",
+    "exp_dir": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset",
+    "out_dir": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset",
+    "latents": {
+        "type": "AEKL",
+        "name": "sdxl-vae",
+        "lib": "diffusers",
+        "model": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Models/sdxl-vae-fp16-fix/"
+    },
+    "model": {
+        "params": {
+            "sample_size": 32
+        }
+    },
+    "dataset": {
+        "name": "ProstateDataset",
+        "image_key": "image",
+        "data_augmentation": false,
+        "train": {
+            "class": "diffusion.data.ProstateDataset.ProstateDatasetImages",
+            "params":{
+                "data_csv": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/train_split_2.csv",
+                "data_root": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/patches",
+                "size": 256,
+                "augmentation": false
+            }
+        },
+        "test":{ 
+            "class": "diffusion.data.ProstateDataset.ProstateDatasetImages",
+            "params":{
+                "data_csv": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/train_split_2.csv",
+                "data_root": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/patches",
+                "size": 256
+            }
+        },
+        "dataloader":{
+            "batch_size": 8,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 47,
+    "batch": 4,
+    "nsamples": 12
+}

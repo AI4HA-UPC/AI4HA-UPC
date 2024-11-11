@@ -1,0 +1,68 @@
+{
+    "name": "PANDAGen-classification-gleason-efficientnet-b2-256-lr4-cosine",
+    "exp_dir": "/gpfs/projects/bsc70/bsc70174/PANDA_code",
+    "model": {
+        "model_path": "/gpfs/projects/bsc70/bsc70174/Models/efficientnet-b2",
+        "num_classes": 12,
+        "model_name": "efficientnet"
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 4,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-4,
+        "lr_warmup_steps": 100,
+        "lr_scheduler_type": "cosine",
+        "epochs": 41,
+        "checkpoint_freq": 1000,
+        "checkpoint_epoch_freq": 5,
+        "pretrain": false,
+        "ols": false
+    },
+    "dataset": {
+        "name": "PANDA",
+        "train": {
+            "data_path": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen/PANDA-L-seg-PNDM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-vpred-zeroSNR",
+            "csv_path": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen/PANDA-L-seg-PNDM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-vpred-zeroSNR/final_train.csv"
+        },
+        "test":{ 
+            "data_path": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen/PANDA-L-seg-PNDM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-vpred-zeroSNR",
+            "csv_path": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen/PANDA-L-seg-PNDM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-vpred-zeroSNR/final_train.csv"
+        },
+        "dataloader":{
+            "batch_size": 32,
+            "num_workers": 6,
+            "shuffle": true
+        },
+        "train_val_split": 0.1,
+        "id2label": {
+            "0": "background/unknown",
+            "1": "stroma",
+            "2": "healthy epithelium",
+            "3": "Gleason 3+3",
+            "4": "Gleason 3+4",
+            "5": "Gleason 4+3",
+            "6": "Gleason 4+4",
+            "7": "Gleason 3+5",
+            "8": "Gleason 5+3",
+            "9": "Gleason 4+5",
+            "10": "Gleason 5+4",
+            "11": "Gleason 5+5"
+        }
+    },
+    "seed": 16,
+    "time": 47,
+    "batch": 32,
+    "push_to_hub": false
+}

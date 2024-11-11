@@ -1,0 +1,16 @@
+{
+    "model_name": "Prostate-L-image-DDIM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-class-vpred-zeroSNR-minsnr-cfg-onehot_MN5",
+    "base_dir": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/PANDA_code",
+    "vae_dir": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Models/sdxl-vae-fp16-fix",
+    "diffuser": {
+        "type": "DDIM",
+        "pipeline": "PNDM",
+        "prediction_type": "v_prediction",
+        "num_inference_steps": 50
+    },
+    "experiment": {
+        "guidance_values": [2, 3, 5, 7],
+        "num_per_class": 400,
+        "batch_size": 4
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "name": "PANDA-L-seg-DDPM-DDIM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-aug-class-SNR-cfg",
+    "exp_dir": "/gpfs/projects/bsc70/bsc70174/PANDA_code",
+    "model": {
+        "modeltype": "UNet2D",
+        "params": {
+            "sample_size": 32,
+            "in_channels": 8,
+            "out_channels": 8,
+            "down_block_types": [ 
+                "AttnDownBlock2D",
+                "AttnDownBlock2D",
+                "AttnDownBlock2D",
+                "DownBlock2D"
+            ],
+            "up_block_types": [
+                "UpBlock2D",
+                "AttnUpBlock2D",
+                "AttnUpBlock2D",
+                "AttnUpBlock2D"
+            ],
+            "block_out_channels": [
+                320,
+                640,
+                1280,
+                1280
+            ],
+            "layers_per_block": 2,
+            "attention_head_dim": 8,
+            "class_embed_type": "timestep"
+        },
+        "image_key":"image",
+        "segmentation": 4
+    },
+    "latents":{
+        "type": "AEKL",
+        "lib":"diffusers",
+        "model": "/gpfs/projects/bsc70/bsc70174/Models/sdxl-vae-fp16-fix"
+    },
+    "ema":{
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay":0.9999
+    },
+    "diffuser":{
+        "type":"DDPM",
+        "pipeline": "DDIMClass",
+        "prediction_type": "sample",
+        "num_steps": 1000,
+        "num_inference_steps": 100,
+        "beta_schedule": "scaled_linear",
+        "clip_sample": false
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 4,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-5,
+        "lr_warmup_steps": 100,
+        "epochs": 100000,
+        "checkpoint_freq": 500,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L2",
+        "conditioning_dropout": 0.15
+    },
+    "samples": {
+        "samples_freq": 1,
+        "samples_num":1,
+        "samples_gen": 10,
+        "guidance_scale": 3
+    },
+    "dataset": {
+        "name": "PANDA",
+        "train": {
+            "class":"diffusion.data.ProstateDataPatches.ExamplesVAE",
+            "params":{
+                "model":"sdxl-vae", 
+                "size": "512-256",
+                "root": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen", 
+                "data_csv": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/train_split_combined.csv",
+                "normalization": 1.0,
+                "segmentation": true,
+                "augmentation": true
+            }
+        },
+        "test":{ 
+            "class":"diffusion.data.ProstateDataPatches.ExamplesVAE",
+            "params":{
+                "model":"sdxl-vae",
+                "size": "512-256",
+                "root": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen", 
+                "data_csv": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/val_split_combined.csv",
+                "normalization": 1.0,
+                "segmentation": true,
+                "augmentation": true
+            }
+        },
+        "dataloader":{
+            "batch_size": 4,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 47,
+    "batch": 4,
+    "nsamples": 7500
+}

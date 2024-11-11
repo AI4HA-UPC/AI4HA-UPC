@@ -1,0 +1,35 @@
+{
+    "dataset": {
+        "name": "PANDA",
+        "real": {
+            "class":"diffusion.data.ProstateDataPatches.ExamplesTrain",
+            "params":{
+                "size": 256,
+                "n_labels": 6,
+                "augmentation": false
+            }
+        },
+        "generated":{ 
+            "class": "diffusion.data.gen_datasets.ProstateGenDataset",
+            "params":{
+                "name": "PANDA-L-seg-DPMSolver-sdxlvae-F-s256-l32-1224-r2-a1-linear-t1000-lr5-wo_scaling-aug",
+                "temp": 20,
+                "size": 256
+            }
+        },
+        "dataloader":{
+            "batch_size": 96,
+            "num_workers": 4,
+            "shuffle": false
+        }
+    },
+    "fid": {
+        "n_features":2048,
+        "weights_path": "/gpfs/projects/bsc70/bsc70174/PANDA_code/Models/pretrained/weights-inception-2015-12-05-6726825d.pth"
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 5,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    }
+}   

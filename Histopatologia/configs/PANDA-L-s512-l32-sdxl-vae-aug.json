@@ -1,0 +1,50 @@
+{
+    "name": "PANDA-L-s512-l32-sdxl-vae-aug",
+    "exp_dir": "/gpfs/projects/bsc70/bsc70174/PANDA_code",
+    "out_dir": "/gpfs/projects/bsc70/bsc70174/Data/PANDAGen",
+    "latents": {
+        "type": "AEKL",
+        "name": "sdxl-vae",
+        "lib": "diffusers",
+        "model": "/gpfs/projects/bsc70/bsc70174/Models/sdxl-vae-fp16-fix/"
+    },
+    "model": {
+        "params": {
+            "sample_size": 32
+        }
+    },
+    "dataset": {
+        "name": "Prostate",
+        "image_key": "image",
+        "data_augmentation": true,
+        "train": {
+            "class": "diffusion.data.ProstateDataPatches.ExamplesTrain",
+            "params":{
+                "data_csv": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/missing_examples.csv",
+                "data_root": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/patches",
+                "segmentation_root": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/masks",
+                "size": 256,
+                "n_labels": 6,
+                "augmentation": false
+            }
+        },
+        "test":{ 
+            "class": "diffusion.data.ProstateDataPatches.ExamplesTest",
+            "params":{
+                "data_csv": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/missing_examples.csv",
+                "data_root": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/patches",
+                "segmentation_root": "/gpfs/projects/bsc70/bsc70174/Data/PANDA/patches_512_v2/masks",
+                "size": 256,
+                "n_labels": 6
+            }
+        },
+        "dataloader":{
+            "batch_size": 8,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 47,
+    "batch": 4,
+    "nsamples": 12
+}

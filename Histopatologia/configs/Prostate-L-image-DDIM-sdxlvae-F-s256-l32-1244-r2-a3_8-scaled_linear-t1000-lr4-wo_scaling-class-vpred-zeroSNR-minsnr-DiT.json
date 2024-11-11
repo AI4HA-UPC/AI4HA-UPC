@@ -1,0 +1,120 @@
+{
+    "name": "Prostate-L-image-DDIM-sdxlvae-F-s256-l32-1244-r2-a3_8-scaled_linear-t1000-lr4-wo_scaling-class-vpred-zeroSNR-minsnr-DiT",
+    "exp_dir": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/PANDA_code",
+    "model": {
+        "modeltype": "DiTTransformer2DModel",
+        "params": {
+            "sample_size": 32,
+            "in_channels": 4,
+            "out_channels": 4,
+            "activation_fn": "gelu-approximate",
+            "attention_bias": true,
+            "attention_head_dim": 72,
+            "dropout": 0.0,
+            "norm_elementwise_affine": false,
+            "norm_num_groups": 32,
+            "norm_type": "ada_norm_zero",
+            "num_attention_heads": 16,
+            "num_embeds_ada_norm": 1000,
+            "num_layers": 28,
+            "patch_size": 2,
+            "upcast_attention": false
+        },
+        "image_key":"image",
+        "labels": {
+            "0": "background/unknown",
+            "1": "stroma",
+            "2": "healthy epithelium",
+            "3": "3+3",
+            "4": "3+4",
+            "5": "4+3",
+            "6": "4+4",
+            "7": "3+5",
+            "8": "5+3",
+            "9": "4+5",
+            "10": "5+4",
+            "11": "5+5"
+        }
+    },
+    "latents":{
+        "type": "AEKL",
+        "lib":"diffusers",
+        "model": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Models/sdxl-vae-fp16-fix"
+    },
+    "ema":{
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay":0.9999
+    },
+    "diffuser":{
+        "type": "DDIM",
+        "pipeline": "DDIM",
+        "prediction_type": "v_prediction",
+        "num_steps": 1000,
+        "num_inference_steps": 50,
+        "beta_schedule": "scaled_linear",
+        "rescale_betas_zero_snr": true
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 4,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-5,
+        "lr_warmup_steps": 100,
+        "epochs": 100000,
+        "checkpoint_freq": 500,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L2",
+        "weighting": "min-snr-lambda"
+    },
+    "samples": {
+        "samples_freq": 1,
+        "samples_num":1,
+        "samples_gen": 10,
+        "guidance_scale": 3
+    },
+    "dataset": {
+        "name": "PANDA",
+        "train": {
+            "class":"diffusion.data.ProstateDataset.ProstateDatasetLatents",
+            "params":{
+                "model":"sdxl-vae", 
+                "size": "512-256",
+                "root": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset", 
+                "data_csv": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/filtered_train_split_combined.csv",
+                "normalization": 1.0,
+                "augmentation": false
+            }
+        },
+        "test":{ 
+            "class":"diffusion.data.ProstateDataset.ProstateDatasetLatents",
+            "params":{
+                "model":"sdxl-vae",
+                "size": "512-256",
+                "root": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset", 
+                "data_csv": "/gpfs/projects/bsc70/MN4/bsc70/bsc70174/Data/ProstateDataset/patches_512/filtered_val_split_combined.csv",
+                "normalization": 1.0,
+                "augmentation": false
+            }
+        },
+        "dataloader":{
+            "batch_size": 8,
+            "num_workers": 6,
+            "shuffle": true
+        }
+    },
+    "time": 47,
+    "batch": 4,
+    "nsamples": 3750
+}
