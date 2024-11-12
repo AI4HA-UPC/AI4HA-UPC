@@ -1,0 +1,74 @@
+{
+    "name": "ExtraMAE",
+    "exp_dir": "ExtraMAE",
+    "ema":{
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay":0.9999
+    },
+    "model": {
+        "in_channels": 6,
+        "series_length": 100,
+        "mask_percent": 0.90,
+        "layers":6,
+        "heads":2,
+        "embed_dim":64,
+        "patch_size":20
+    },
+
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 1,
+        "mixed_precision": "no",
+        "log_with":"wandb"
+    },
+    "optimizer":{
+        "beta1":0.95,
+        "beta2":0.999,
+        "weight_decay":1e-6,
+        "epsilon":1e-08
+    },
+    "train": {
+        "learning_rate": 1e-4,
+        "lr_warmup_steps": 100,
+        "epochs": 1000,
+        "checkpoint_freq": 2000,
+        "checkpoint_epoch_freq": 2,
+        "loss": "L2"
+    },
+    "samples": {
+        "samples_freq": 25,
+        "samples_num": 20,
+        "samples_gen": 3136
+    },
+
+    "dataset": {
+        "name": "pd_CSIC",
+        "nclasses":4,
+        "train": {
+            "class":"TimeGANDataset.TimeGANDataset",
+            "params":{
+                "filename": "timegan_data",
+                "channels": 6
+            }
+        },
+
+        "test":{ 
+            "class": "ai4ha.data.series.KUHARDataLoader.KUHARtrain",
+            "params":{
+                "filename": "/KU-HAR/KU-HAR.csv",
+                "channels": 6
+            }
+        },
+        "dataloader":{
+            "batch_size": 64,
+            "num_workers": 1,
+            "shuffle": true
+        },
+        "store_name": "M90_L6_H2_emb64_P20_train20",
+        "train_file": "train20"
+    },
+    "time": 12
+}

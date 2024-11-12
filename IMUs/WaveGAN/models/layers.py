@@ -1,0 +1,165 @@
+import torch.nn as nn
+import torch
+import torch.nn.functional as F
+from torch import Tensor
+import math
+
+
+class UpsamplingConvo1D(nn.Module):
+    """_Upsampling plus convolution as alternative deconvolution_
+
+    Applies an upsampling layer to the input sequence and then applies a
+    convolution to the upsampled sequence.
+
+    This is an alternative to 1D deconvolution used in waveGAN/pulse2pulse.
+    """
+
+    def __init__(self, in_channels, out_channels, upsample, kernel_size,
+                 stride, padding):
+        super(UpsamplingConvo1D, self).__init__()
+        self.upsample = nn.Upsample(scale_factor=upsample, mode="nearest")
+        reflection_pad = kernel_size // 2
+        self.reflection_pad = nn.ConstantPad1d(reflection_pad, value=0)
+        self.conv = nn.Conv1d(in_channels, out_channels, kernel_size, stride,
+                              padding)
+
+    def forward(self, x):
+        x = self.upsample(x)
+        x = self.reflection_pad(x)
+        x = self.conv(x)
+        return x
+
+
+class WaveGANDeconvolution(nn.Module):
+    """_WaveGAN deconvolution layer_
+
+    Applies an upsampling layer to the input sequence and then applies a
+    convolution to the upsampled sequence.
+
+    This is an alternative to 1D deconvolution used in waveGAN/pulse2pulse.
+    """
+
+    def __init__(self,
+                 in_channels,
+                 out_channels,
+                 kernel_size,
+                 stride,
+                 padding,
+                 upsampling=False):
+        super(WaveGANDeconvolution, self).__init__()
+        if upsampling:
+            self.deconvo = UpsamplingConvo1D(in_channels, out_channels, stride,
+                                             kernel_size, 1, 0)
+        else:
+            self.deconvo = nn.ConvTranspose1d(in_channels, out_channels,
+                                              kernel_size, stride, padding)
+
+    def forward(self, x):
+        return self.deconvo(x)
+
+
+class PhaseShuffle(nn.Module):
+    """
+    Copied from https://github.com/jtcramer/wavegan/blob/master/wavegan.py#L8
+
+    Performs phase shuffling, i.e. shifting feature axis of a 3D tensor
+    by a random integer in {-n, n} and performing reflection padding where
+    necessary
+
+    If batch shuffle is enabled, only a single shuffle is applied to the entire
+    batch, rather than each sample in the batch.
+    """
+
+    def __init__(self, shift_factor, batch_shuffle=False):
+        super(PhaseShuffle, self).__init__()
+        self.shift_factor = shift_factor
+        self.batch_shuffle = batch_shuffle
+
+    def forward(self, x):
+        # Return x if phase shift is disabled
+        if self.shift_factor == 0:
+            return x
+
+        if self.batch_shuffle:
+            # Make sure to use PyTorcTrueh to generate number RNG state is all shared
+            k = int(torch.Tensor(1).random_(
+                0, 2 * self.shift_factor + 1)) - self.shift_factor
+
+            # Return if no phase shift
+            if k == 0:
+                return x
+
+            # Slice feature dimension
+            if k > 0:
+                x_trunc = x[:, :, :-k]
+                pad = (k, 0)
+            else:
+                x_trunc = x[:, :, -k:]
+                pad = (0, -k)
+
+            # Reflection padding
+            x_shuffle = F.pad(x_trunc, pad, mode='reflect')
+
+        else:
+            # Generate shifts for each sample in the batch
+            k_list = torch.Tensor(x.shape[0]).random_(0, 2*self.shift_factor+1)\
+                - self.shift_factor
+            k_list = k_list.numpy().astype(int)
+
+            # Combine sample indices into lists so that less shuffle operations
+            # need to be performed
+            k_map = {}
+            for idx, k in enumerate(k_list):
+                k = int(k)
+                if k not in k_map:
+                    k_map[k] = []
+                k_map[k].append(idx)
+
+            # Make a copy of x for our output
+            x_shuffle = x.clone()
+
+            # Apply shuffle to each sample
+            for k, idxs in k_map.items():
+                if k > 0:
+                    x_shuffle[idxs] = F.pad(x[idxs][..., :-k], (k, 0),
+                                            mode='reflect')
+                else:
+                    x_shuffle[idxs] = F.pad(x[idxs][..., -k:], (0, -k),
+                                            mode='reflect')
+
+        assert x_shuffle.shape == x.shape, "{}, {}".format(
+            x_shuffle.shape, x.shape)
+        return x_shuffle
+
+
+class PositionalEncoding(nn.Module):
+    """ __Positional encoding layer__
+
+    Taken from torch tutorial on transformer:
+    https://pytorch.org/tutorials/beginner/transformer_tutorial.html
+
+
+    """
+    def __init__(self,
+                 d_model: int,
+                 dropout: float = 0.1,
+                 max_len: int = 5000):
+        super().__init__()
+        self.dropout = nn.Dropout(p=dropout)
+
+        position = torch.arange(max_len).unsqueeze(1)
+        div_term = torch.exp(
+            torch.arange(0, d_model, 2) * (-math.log(10000.0) / d_model))
+        pe = torch.zeros(max_len, 1, d_model)
+        pe[:, 0, 0::2] = torch.sin(position * div_term)
+        pe[:, 0, 1::2] = torch.cos(position * div_term)
+        self.register_buffer('pe', pe)
+
+    def forward(self, x: Tensor) -> Tensor:
+        """
+        Arguments:
+            x: Tensor, shape ``[seq_len, batch_size, embedding_dim]``
+        """
+        x = x + self.pe[:x.size(0)]
+        return self.dropout(x)
+

@@ -1,0 +1,43 @@
+train:
+  optimizer: null
+  learning_rate: 0.001
+  n_epochs: 10
+  iters_per_ckpt: 100 # Number of epochs before storing checkpoint information
+  output_directory: "checkpoint" # Folder to store checkpoint data
+
+model:
+  name: "timegan"
+  in_channels: 6
+  hidden_channels: 6
+  out_channels: 6
+  max_seq_len: 100
+  emb_epochs: 100
+  sup_epochs: 100
+  gan_epochs: 100
+  batch_size: 64
+  hidden_dim: 4
+  num_layers: 3
+  optimizer: "adam"
+  learning_rate: 1e-3
+
+
+diffusion:
+  T: 200
+  beta_0: 0.0001
+  beta_T: 0.02
+  beta: None
+  fast: False
+
+dataset:
+  folder_path: "datasets/HUGaDB/selected/"
+  n_channels: 6
+  batch_size: 64
+  num_gpus: 1
+  train_file: "test_dataset"
+
+generate:
+  ckpt_iter: "max"
+  n_channels: 6
+  sampling_rate: 5283
+  output_directory: "waveform" # Folder to store generated data
+  name: "hd4_nl3_100ep_crossEntropy_RNN_LabPrevStep_test10"

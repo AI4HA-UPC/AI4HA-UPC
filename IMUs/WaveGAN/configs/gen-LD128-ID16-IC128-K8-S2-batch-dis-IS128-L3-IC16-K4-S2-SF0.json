@@ -1,0 +1,109 @@
+{
+    "name": "WaveGAN",
+    "exp_dir": "./WaveGAN",
+    "model": {
+        "generator": {
+            "class": "models.WaveGANGenerator.WaveGANGenerator",
+            "latent_dim":[64],
+            "params": {
+                "latent_dim": 64,
+                "init_dim": 16,
+                "init_channels": 64,
+                "output_size": 64,
+                "output_channels": 6,
+                "kernel_size": 8,
+                "stride": 2,
+                "normalization": "batch",
+                "n_classes": 4
+            }
+        },
+        "discriminator": {
+            "class": "models.WaveGANDiscriminator.WaveGANDiscriminator",
+            "params": {
+                "input_size":64,
+                "input_channels":6,
+                "n_layers":3,
+                "init_channels":16,
+                "kernel_size":4,
+                "stride":2,
+                "shift_factor": 0,
+                "n_classes":4,
+                "sp_norm":true
+            }
+        }
+    },
+    "optimizer": {
+        "lr": 0.0002,
+        "beta1": 0.5,
+        "beta2": 0.999
+    },
+    "scheduler": {
+        "step_size": 30,
+        "gamma": 0.1
+    },
+    "train": {
+        "batch_size": 64,
+        "num_epochs": 500,
+        "log_interval": 10,
+        "save_interval": 10,
+        "lr_warmup_steps": 10,
+        "lambda_gp": 0.1,
+        "checkpoint_epoch_freq":10,
+        "best_model": false
+    },
+    "data": {
+        "path": "data/processed/"
+    },
+    "ema": {
+        "inv_gamma": 1.0,
+        "power": 0.75,
+        "max_decay": 0.9999
+    },
+    "projectconf": {
+        "total_limit": 2
+    },
+    "accelerator": {
+        "gradient_accumulation_steps": 1,
+        "mixed_precision": "no",
+        "log_with": "wandb"
+    },
+    "samples": {
+        "samples_freq": 25,
+        "samples_num": 20,
+        "samples_gen": 1000
+    },
+    "dataset": {
+        "name": "pd_CSIC",
+        "nclasses": 4,
+        "train": {
+            "class": "TimeGANDataset.TimeGANDataset",
+            "params": {
+                "filename": "./timegan_data",
+                "n_samples": 2000,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 256,
+                "normalize": false
+            }
+        },
+        "test": {
+            "class": "ai4ha.data.series.MITBIHDataLoader.MITBIHtest",
+            "params": {
+                "filename": "/gpfs/projects/bsc70/bsc70642/Data/MITBIH/mitbih_test.csv",
+                "n_samples": 100,
+                "resamp": false,
+                "oneD": true,
+                "fixsize": 256,
+                "normalize": false
+            }
+        },
+        "dataloader": {
+            "batch_size": 16,
+            "num_workers": 1,
+            "shuffle": true
+        },
+        "store_name": "gen-LD128-ID16-IC128-K8-S2-batch-dis-IS128-L3-IC16-K4-S2-SF0-moba"
+    },
+    "time": 12
+}
+
