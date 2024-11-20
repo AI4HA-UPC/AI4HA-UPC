@@ -1,0 +1,58 @@
+BootStrap: docker
+From: nvidia/cuda:12.3.2-cudnn9-runtime-ubuntu22.04
+
+%post
+    # Install Python 3.10
+    apt update -y
+    apt install -y software-properties-common
+    add-apt-repository ppa:deadsnakes/ppa -y
+    apt update -y
+    apt-get install -y git
+    apt install -y curl
+    apt install -y python3.10
+    apt-get -y install libopenslide0
+    apt-get install -y automake build-essential bzip2 wget git default-jre unzip
+    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+    update-alternatives --install /usr/bin/python python /usr/bin/python3.10 1
+    apt install -y python3.10-venv python3.10-dev
+    apt-get -y install mpich
+    #apt-get -y install miopen-hip
+    curl -Ss https://bootstrap.pypa.io/get-pip.py | python3.10
+    apt-get clean
+    rm -rf /var/lib/apt/lists/
+
+    # Install
+    pip3 install mpi4py
+    pip3 install torch==2.2.1 torchvision==0.17.1 torchaudio==2.2.1 --index-url https://download.pytorch.org/whl/cu121
+    pip3 install torchmetrics xformers==0.0.25 kornia einops x_transformers
+    pip3 install segmentation-models-pytorch pytorch-lightning torch-fidelity triton
+    pip3 install tensorboard torchinfo facexlib supervised_fcn vector-quantize-pytorch
+    pip3 install monai streamlit pykeops geomloss timm peft 
+    pip3 install albumentations accelerate transformers diffusers datasets safetensors
+    pip3 install stylegan2_pytorch gfpgan unet-stylegan2 lightweight-gan
+    pip3 install Pillow imageio imageio-ffmpeg scikit-image opencv-python
+    pip3 install numpy pandas scipy scikit-learn
+    pip3 install hydra-core optuna  hydra-optuna-sweeper omegaconf
+    pip3 install seaborn yellowbrick matplotlib
+    pip3 install tqdm ninja h5py PyYaml click requests pyspng pudb more-itertools basicsr evaluate
+    pip3 install openslide-python faiss-gpu
+    pip3 install wandb==0.16.4 aim toml
+    pip3 install git+https://github.com/marcojira/fld.git
+
+    # Directory structure
+    mkdir /data
+    mkdir /code
+    mkdir /import
+    mkdir /scratch 
+    mkdir -p /gpfs/home /gpfs/scratch /gpfs/projects /gpfs/apps /apps
+    pip3 list
+
+%environment
+# Set any environment variables if required
+
+%runscript
+# Add a runscript if needed
+
+%labels
+   Author Javier Bejar Alonso
+   Institution Universitat Politècnica de Catalunya
