@@ -1,1 +1,5 @@
-Caso de uso: Geneación de datos sintéticos de EEG en pruebas de sueño
+Caso de uso: Generación de datos sintéticos de EEG en pruebas de sueño
+
+Modelos:
+
+ - TimeDiffusion

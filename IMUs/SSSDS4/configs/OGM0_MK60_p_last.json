@@ -1,0 +1,46 @@
+{
+
+    "diffusion_config":{
+        "T": 200,
+        "beta_0": 0.0001,
+        "beta_T": 0.02
+    },
+    "wavenet_config": {
+        "in_channels": 6, 
+        "out_channels":6,
+        "num_res_layers": 4,
+        "res_channels": 128, 
+        "skip_channels": 128,
+        "diffusion_step_embed_dim_in": 64,
+        "diffusion_step_embed_dim_mid": 256,
+        "diffusion_step_embed_dim_out": 256,
+        "s4_lmax": 100,
+        "s4_d_state":64,
+        "s4_dropout":0.0,
+        "s4_bidirectional":1,
+        "s4_layernorm":1
+    },
+    "train_config": {
+        "output_directory": "./results/OGM0_MK60_p_last/",
+        "ckpt_iter": "max",
+        "iters_per_ckpt": 100,
+        "iters_per_logging": 100,
+        "n_iters": 1000,
+        "learning_rate": 1e-4,
+        "only_generate_missing": 0,
+        "use_model": 2,
+        "masking": "rm",
+        "missing_k": 60
+    },
+   
+     "trainset_config":{
+        "train_data_path": "./timegan_data",
+        "test_data_path": "./timegan_data",
+        "segment_length":100,
+        "sampling_rate": 100
+    },
+    "gen_config":{
+        "output_directory": "./results/OGM0_MK60_p_last/",
+        "ckpt_path": "./results/OGM0_MK60_p_last/"
+    }
+}
