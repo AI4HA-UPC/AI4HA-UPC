@@ -1,0 +1,58 @@
+experiments:
+#    experiment_dummy:
+#        epochs: 2
+#        batch_size: 32
+#        n_neurons: 10
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_real_ISRUC_combined:
+#        dataset: "isruc_combined"
+#        channel: 1
+#        epochs: 100
+#        batch_size: 128
+#        n_neurons: 1024
+#        num_conv_blocks: 7
+#        earlystop:
+#            patience: 10
+#            delta: 0.00001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#        sample_frequency: 100
+#    experiment_real_ISRUC_combined_2:
+#        dataset: "isruc_combined"
+#        channel: 1
+#        epochs: 100
+#        batch_size: 32
+#        n_neurons: 256
+#        num_conv_blocks: 9
+#        earlystop:
+#            patience: 5
+#            delta: 0.00001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#        sample_frequency: 100
+    experiment_real_SleepEDF_combined:
+        dataset: "sleepedf_combined"
+        channel: 1
+        epochs: 100
+        batch_size: 32
+        n_neurons: 512
+        num_conv_blocks: 9
+        earlystop:
+            patience: 5
+            delta: 0.00001
+        binary_classification: False
+        weight_classes: 0
+        data_split: 0.9
+        use_synthetic: 0
+        use_real_and_synthetic: 0
+        sample_frequency: 100

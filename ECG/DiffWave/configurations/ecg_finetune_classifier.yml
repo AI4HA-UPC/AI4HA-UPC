@@ -1,0 +1,65 @@
+experiments:
+    ptbxl_1dcnn_finetune:
+        dataset: "ptbxl"
+        folder: "ptbxl_1dcnn"
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn_classification_head"
+        model: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm"
+        synthetic_features_files: [
+              "PTBXL_UNET1C-linear-zsnr.npz",
+              "PTBXL_UNET1C-cosine-zsnr.npz"
+#            "PTBXL_CNN_UNET1C-s384-l8-1244-r3-a1-te-positional-ce-embedding-3.npz",
+#            "PTBXL_CNN_UNET1C-s384-l16-124-r3-a1-te-positional-ce-embedding-9.npz",
+#            "PTBXL_CNN_UNET1C-s384-l16-124-r4-a1-te-positional-ce-embedding-3.npz"
+        ]
+        real_features_file: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm_features.npy"
+#        subset_classes: [3,4,5,6]
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 6
+            n_kernels: 32
+            filter_size: 7
+            n_neurons_classifier: 256
+            n_layers_classifier: 3
+            learning_rate: 0.0003233892844751835
+            dropout_rate: 0.47433327401343556
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+            weight_factor: 0.05
+        binary_classification: False
+    ptbxl_1dcnn_finetune_subset_classes:
+        dataset: "ptbxl"
+        folder: "ptbxl_1dcnn"
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn_classification_head"
+        model: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm"
+        synthetic_features_files: [
+#              "PTBXL_UNET1C-linear-zsnr.npz",
+              "PTBXL_UNET1C-cosine-zsnr.npz"
+#            "PTBXL_CNN_UNET1C-s384-l8-1244-r3-a1-te-positional-ce-embedding-3.npz",
+#            "PTBXL_CNN_UNET1C-s384-l16-124-r3-a1-te-positional-ce-embedding-9.npz",
+#            "PTBXL_CNN_UNET1C-s384-l16-124-r4-a1-te-positional-ce-embedding-3.npz"
+        ]
+        real_features_file: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm_features.npy"
+        subset_classes: [3,4,5,6]
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 6
+            n_kernels: 32
+            filter_size: 7
+            n_neurons_classifier: 256
+            n_layers_classifier: 3
+            learning_rate: 0.0003233892844751835
+            dropout_rate: 0.47433327401343556
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+            weight_factor: 0.05
+        binary_classification: False

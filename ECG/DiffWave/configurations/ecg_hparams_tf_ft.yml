@@ -1,0 +1,157 @@
+experiments:
+#    experiment_ptbxl_finetune_1dcnn_final:
+#        dataset: "ptbxl"
+#        model: "final/experiment_PTBXL_1dcnn_all_final_TrSTeR_full_PTBXLSyntheticRhythm_17"
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 5
+#            n_kernels: 16
+#            filter_size: 7
+#            n_neurons_classifier: 256
+#            n_layers_classifier: 3
+#            learning_rate: 0.00015844374991193032
+#            dropout_rate: 0.3776011477685085
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        weight_classes: 0
+#        freeze_layers: True
+#        generative_model: "all"
+#        standardize: True
+    experiment_chapman_finetune_1dcnn_final:
+        dataset: "chapman"
+        model: "experiment_CHAPMAN_1dcnn_all_final_TrSTeR_full_CHAPMANSynthetic_17"
+        classifier: "custom_1dcnn"
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 5
+            n_kernels: 16
+            filter_size: 7
+            n_neurons_classifier: 256
+            n_layers_classifier: 3
+            learning_rate: 0.00015844374991193032
+            dropout_rate: 0.3776011477685085
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+        binary_classification: False
+        weight_classes: 0
+        freeze_layers: True
+        generative_model: "all"
+        standardize: True
+
+#    experiment_real_ptbxl_synthetic_ptbxl_FT:
+#        dataset: "ptbxl"
+#        model: "experiment_real_PTBXL_100hz"
+#        epochs: 100
+#        batch_size: 128
+#        n_neurons: 1024
+#        num_conv_blocks: 1
+#        earlystop:
+#            patience: 3
+#            delta: 0.0001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 1
+#        sample_frequency: 100
+#        freeze_layers: False
+#    experiment_real_ptbxl_synthetic_ptbxl_freze_FT:
+#        dataset: "ptbxl"
+#        model: "experiment_real_PTBXL_100hz"
+#        epochs: 100
+#        batch_size: 128
+#        n_neurons: 1024
+#        num_conv_blocks: 1
+#        earlystop:
+#            patience: 3
+#            delta: 0.0001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 1
+#        use_real_and_synthetic: 0
+#        sample_frequency: 100
+#        freeze_layers: True
+#    experiment_real_chapman_real_ptbxl_FT:
+#        dataset: "ptbxl"
+#        model: "experiment_real_CHAPMAN"
+#        epochs: 100
+#        batch_size: 64
+#        n_neurons: 256
+#        num_conv_blocks: 8
+#        earlystop:
+#            patience: 10
+#            delta: 0.00001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_synthetic_MIT_FT:
+#        dataset: "mit-bih"
+#        model: "experiment_synthetic_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_real_MIT_FT:
+#        dataset: "mit-bih"
+#        model: "new"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_synthetic_PTB_FT:
+#        dataset: "ptb-diagnostic"
+#        model: "experiment_synthetic_PTB"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 2
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_real_PTB_FT:
+#        dataset: "ptb-diagnostic"
+#        model: "new"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 2
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    experiment_synthetic_MIT_real_PTB_FT:
+#        dataset: "ptb-diagnostic"
+#        model: "experiment_synthetic_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0

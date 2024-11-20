@@ -1,0 +1,131 @@
+experiments:
+#    experiment_dummy:
+#        epochs: 2
+#        batch_size: 32
+#        n_neurons: 10
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+    test_ptbxl_1dcnn:
+        dataset: "ptbxl"
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn"
+        model: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm"
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 6
+            n_kernels: 32
+            filter_size: 7
+            n_neurons_classifier: 256
+            n_layers_classifier: 3
+            learning_rate: 0.0003233892844751835
+            dropout_rate: 0.47433327401343556
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+        binary_classification: False
+        experiment_settings: ["TrRTeR"]
+#    train_real_CHAPMAN_test_real_PTBXL:
+#        dataset: "ptbxl"
+#        model: "experiment_real_CHAPMAN"
+#        epochs: 100
+#        batch_size: 64
+#        n_neurons: 256
+#        num_conv_blocks: 8
+#        earlystop:
+#            patience: 10
+#            delta: 0.00001
+#        binary_classification: False
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    train_real_synthetic_test_real_MIT:
+#        dataset: "mit-bih"
+#        model: "experiment_real_synthetic_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    train_synthetic_test_real_MIT:
+#        dataset: "mit-bih"
+#        model: "experiment_synthetic_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    train_synthetic_test_synthetic_MIT:
+#        dataset: "mit-bih"
+#        model: "experiment_synthetic_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 1
+#        use_real_and_synthetic: 0
+#    train_real_test_real_MIT:
+#        dataset: "mit-bih"
+#        model: "experiment_real_MIT"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 5
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    train_synthetic_test_real_PTB:
+#        dataset: "ptb-diagnostic"
+#        model: "experiment_synthetic_PTB"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 2
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0
+#    train_synthetic_test_synthetic_PTB:
+#        dataset: "ptb-diagnostic"
+#        model: "experiment_synthetic_PTB"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 2
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 1
+#        use_real_and_synthetic: 0
+#    train_real_test_real_PTB:
+#        dataset: "ptb-diagnostic"
+#        model: "experiment_real_PTB"
+#        epochs: 40
+#        batch_size: 512
+#        n_neurons: 256
+#        num_conv_blocks: 1
+#        num_classes: 2
+#        weight_classes: 0
+#        data_split: 0.9
+#        use_synthetic: 0
+#        use_real_and_synthetic: 0

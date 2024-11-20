@@ -1,0 +1,93 @@
+experiments:
+  # ptbxl and chapman together
+  ptbxl_chapman_transformer:
+    dataset: "ptbxl_chapman"
+    trials: 150
+    sample_frequency: 100
+    classifier: "transformer"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    experiment_settings: ["TrRTrRTeRTeR"]
+  ptbxl_chapman_custom_1dcnn:
+    dataset: "ptbxl_chapman"
+    trials: 100
+    sample_frequency: 100
+    classifier: "custom_1dcnn"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    experiment_settings: ["TrRTrRTeRTeR"]
+
+  #ptbxl dataset
+  ptbxl_transformer:
+    dataset: "ptbxl"
+    trials: 120
+    sample_frequency: 100
+    classifier: "transformer"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    experiment_settings: ["TrRTrRTeRTeR"]
+  ptbxl_custom_1dcnn:
+    dataset: "ptbxl"
+    trials: 120
+    sample_frequency: 100
+    classifier: "custom_1dcnn"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    data_split: 0.9
+    use_synthetic: 0
+    use_real_and_synthetic: 0
+
+  # chapman dataset
+  chapman_transformer:
+    dataset: "chapman"
+    trials: 120
+    sample_frequency: 100
+    classifier: "transformer"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    experiment_settings: ["TrRTrRTeRTeR"]
+  chapman_custom_1dcnn:
+    dataset: "chapman"
+    trials: 120
+    sample_frequency: 100
+    classifier: "custom_1dcnn"
+    epochs: 1000
+    batch_size: 32
+    standardize: True
+    earlystop:
+      patience: 10
+      delta: 0.00001
+    binary_classification: False
+    weight_classes: 0
+    experiment_settings: ["TrRTrRTeRTeR"]
+

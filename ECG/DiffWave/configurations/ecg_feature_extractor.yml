@@ -1,0 +1,129 @@
+experiments:
+    ptbxl_1dcnn_extractor:
+        dataset: "ptbxl"
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn_feature_extractor"
+        model: "experiment_PTBXL_1dcnn_real_TrRTeR_full_PTBXLRhythm"
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 6
+            n_kernels: 32
+            filter_size: 7
+            n_neurons_classifier: 256
+            n_layers_classifier: 3
+            learning_rate: 0.0003233892844751835
+            dropout_rate: 0.47433327401343556
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+        binary_classification: False
+#    chapman_1dcnn_extractor:
+#        dataset: "chapman"
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn_feature_extractor"
+#        model: "experiment_CHAPMAN_1dcnn_real_TrRTeR_full_CHAPMAN"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 5
+#            n_kernels: 16
+#            filter_size: 7
+#            n_neurons_classifier: 256
+#            n_layers_classifier: 3
+#            learning_rate: 0.00015844374991193032
+#            dropout_rate: 0.3776011477685085
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#
+#    ptbxl_transformer_extractor:
+#        dataset: "ptbxl"
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "transformer_feature_extractor"
+#        model: "experiment_PTBXL_transformer_real_TrRTeR_full_PTBXLRhythm"
+#        model_hparams:
+#            patch_size: 129
+#            data_embed_dim: 256
+#            n_layers: 2
+#            n_heads: 64
+#            dropout_rate: 0.45714918688543194
+#            class_logits: "avgpool"
+#            batch_size: 32
+#            learning_rate: 0.0030212475432458896
+#            epochs: 1000
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#    chapman_transformer_extractor:
+#        dataset: "chapman"
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "transformer_feature_extractor"
+#        model: "experiment_CHAPMAN_transformer_real_TrRTeR_full_CHAPMAN"
+#        model_hparams:
+#            patch_size: 48
+#            data_embed_dim: 256
+#            n_layers: 4
+#            n_heads: 128
+#            dropout_rate: 0.198954922016355
+#            class_logits: "avgpool"
+#            batch_size: 32
+#            learning_rate: 0.001424562130170643
+#            epochs: 1000
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+
+    ptbxl_chapman_1dcnn_extractor:
+        dataset: "ptbxl_chapman"
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn_feature_extractor"
+        model: "experiment_PTBXL_real_CHAPMAN_real_1dcnn_all_TrRTeR_full_PTBXLAndCHAPMANReal"
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 7
+            n_kernels: 32
+            filter_size: 5
+            n_neurons_classifier: 16
+            n_layers_classifier: 1
+            learning_rate: 0.00044745999999377104
+            dropout_rate: 0.14418933085250546
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+        binary_classification: False
+#    ptbxl_chapman_transformer_extractor:
+#        dataset: "ptbxl_chapman"
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "transformer_feature_extractor"
+#        model: "experiment_PTBXL_CHAPMAN_transformer_real_TrRTeR_full_PTBXLAndCHAPMANReal"
+#        model_hparams:
+#            patch_size: 73
+#            data_embed_dim: 256
+#            n_layers: 15
+#            n_heads: 256
+#            dropout_rate: 0.011524712908943913
+#            class_logits: "avgpool"
+#            batch_size: 32
+#            learning_rate: 0.003194164246724182
+#            epochs: 1000
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False

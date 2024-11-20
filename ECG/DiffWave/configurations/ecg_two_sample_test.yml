@@ -1,0 +1,145 @@
+experiments:
+#    two_sample_test_PTBXL_1dcnn_diffwave:
+#        dataset: "ptbxl"
+#        two_sample_test: True
+#        maximum_mean_discrepancy: False
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 7
+#            n_kernels: 32
+#            filter_size: 5
+#            n_neurons_classifier: 16
+#            n_layers_classifier: 1
+#            learning_rate: 0.00044745999999377104
+#            dropout_rate: 0.14418933085250546
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        generative_model: "diffwave"
+#        experiment_settings: ["TrRSTeRS"]
+#    two_sample_test_PTBXL_1dcnn_time_diffusion_UNET_ZERO_r2_a1:
+#        dataset: "ptbxl"
+#        two_sample_test: True
+#        maximum_mean_discrepancy: False
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 7
+#            n_kernels: 32
+#            filter_size: 5
+#            n_neurons_classifier: 16
+#            n_layers_classifier: 1
+#            learning_rate: 0.00044745999999377104
+#            dropout_rate: 0.14418933085250546
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        generative_model: "time_diffusion"
+#        experiment_settings: ["TrRSTeRS"]
+#    two_sample_test_PTBXL_1dcnn_time_vqvae:
+#        dataset: "ptbxl"
+#        two_sample_test: True
+#        maximum_mean_discrepancy: False
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 7
+#            n_kernels: 32
+#            filter_size: 5
+#            n_neurons_classifier: 16
+#            n_layers_classifier: 1
+#            learning_rate: 0.00044745999999377104
+#            dropout_rate: 0.14418933085250546
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        generative_model: "time_vqvae"
+#        experiment_settings: ["TrRSTeRS"]
+#    two_sample_test_CHAPMAN_1dcnn_diffwave:
+#        dataset: "chapman"
+#        two_sample_test: True
+#        maximum_mean_discrepancy: False
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 7
+#            n_kernels: 32
+#            filter_size: 5
+#            n_neurons_classifier: 16
+#            n_layers_classifier: 1
+#            learning_rate: 0.00044745999999377104
+#            dropout_rate: 0.14418933085250546
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        generative_model: "diffwave"
+#        experiment_settings: ["TrRSTeRS"]
+    two_sample_test_CHAPMAN_1dcnn_time_diffusion_UNET1C_r1:
+        dataset: "chapman"
+        two_sample_test: True
+        maximum_mean_discrepancy: False
+        sample_frequency: 100
+        standardize: True
+        classifier: "custom_1dcnn"
+        model_hparams:
+            epochs: 1000
+            batch_size: 32
+            n_conv_blocks: 7
+            n_kernels: 32
+            filter_size: 5
+            n_neurons_classifier: 16
+            n_layers_classifier: 1
+            learning_rate: 0.00044745999999377104
+            dropout_rate: 0.14418933085250546
+            earlystop:
+                patience: 10
+                delta: 0.00001
+            weight_classes: 0
+        binary_classification: False
+        generative_model: "time_diffusion"
+        experiment_settings: ["TrRSTeRS"]
+#    two_sample_test_CHAPMAN_1dcnn_time_vqvae:
+#        dataset: "chapman"
+#        two_sample_test: True
+#        maximum_mean_discrepancy: False
+#        sample_frequency: 100
+#        standardize: True
+#        classifier: "custom_1dcnn"
+#        model_hparams:
+#            epochs: 1000
+#            batch_size: 32
+#            n_conv_blocks: 7
+#            n_kernels: 32
+#            filter_size: 5
+#            n_neurons_classifier: 16
+#            n_layers_classifier: 1
+#            learning_rate: 0.00044745999999377104
+#            dropout_rate: 0.14418933085250546
+#            earlystop:
+#                patience: 10
+#                delta: 0.00001
+#            weight_classes: 0
+#        binary_classification: False
+#        generative_model: "time_vqvae"
+#        experiment_settings: ["TrRSTeRS"]
