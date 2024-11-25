@@ -1,0 +1,95 @@
+dataset:
+  data_scaling: True
+  batch_sizes:
+    stage1: 128
+    stage2: 256
+    stage3: 128
+
+exp_params:
+  lr: 0.0005
+  linear_warmup_rate: 0.1
+  exp_name: "PTBXL_100-combined-a"
+
+trainer_params:
+  max_steps:
+    stage1:  500000
+    stage2:  1000000
+    stage_fid_enhancer: 500000
+  val_check_interval:
+    stage1: 50000
+    stage2: 100000
+    stage_fid_enhancer: 50000
+
+encoder:
+  init_dim: 16  # initial dimension
+  hid_dim: 64  # hidden dimension in the bottleneck
+  n_resnet_blocks: 4
+  downsampled_width:
+    lf: 8
+    hf: 32
+
+decoder:
+  n_resnet_blocks: 4
+
+VQ-VAE:
+  n_fft: 16
+  codebook_sizes:
+    lf: 64
+    hf: 64
+
+MaskGIT:
+  choice_temperatures: # higher temp -> higher sample diversity
+    lf: 4
+    hf: 4
+  T:  # num sampling (iterative decoding) steps
+    lf: 10
+    hf: 10
+  prior_model_l:
+    hidden_dim: 64
+    n_layers: 4
+    heads: 2
+    ff_mult: 1
+    use_rmsnorm: True
+    p_unconditional: 0.2
+    model_dropout: 0.3
+    emb_dropout: 0.3
+  prior_model_h:
+    hidden_dim: 64
+    n_layers: 4
+    heads: 2
+    ff_mult: 1
+    use_rmsnorm: True
+    p_unconditional: 0.2
+    model_dropout: 0.3
+    emb_dropout: 0.3
+  cfg_scale: 1.  # classifier-free guidance scale
+  # ESS:  # under maintenance
+  #   use: False
+  #   error_ratio_ma_rate: 0.3
+
+
+
+fidelity_enhancer:
+  dim: 8
+  dim_mults:
+    - 1
+    - 2
+    - 4
+    - 8
+  resnet_block_groups: 4
+  dropout: 0.5
+  tau_search_rng: 
+    - 0.1
+    - 0.5
+    - 1
+    - 2
+    - 4
+  # tau_search_rng: 
+    # - 512
+  percept_loss_weight: 0. #1000
+
+evaluation:
+  batch_size: 128
+  min_num_gen_samples: 1024
+
+stage: 1

@@ -1,0 +1,95 @@
+dataset:
+  data_scaling: True
+  batch_sizes:
+    stage1: 160
+    stage2: 256
+    stage3: 128
+
+exp_params:
+  lr: 0.0005
+  linear_warmup_rate: 0.1
+  exp_name: "Sleep-EDF_Fpz-Cz_VQVAE-c"
+
+trainer_params:
+  max_steps:
+    stage1:  250000
+    stage2:  500000
+    stage_fid_enhancer: 250000
+  val_check_interval:
+    stage1: 10000
+    stage2: 25000
+    stage_fid_enhancer: 1000
+
+encoder:
+  init_dim: 8  # initial dimension
+  hid_dim: 32  # hidden dimension in the bottleneck
+  n_resnet_blocks: 3
+  downsampled_width:
+    lf: 64
+    hf: 64
+
+decoder:
+  n_resnet_blocks: 3
+
+VQ-VAE:
+  n_fft: 16
+  codebook_sizes:
+    lf: 32
+    hf: 32
+
+MaskGIT:
+  choice_temperatures: # higher temp -> higher sample diversity
+    lf: 10
+    hf: 4
+  T:  # num sampling (iterative decoding) steps
+    lf: 10
+    hf: 1
+  prior_model_l:
+    hidden_dim: 32
+    n_layers: 4
+    heads: 2
+    ff_mult: 1
+    use_rmsnorm: True
+    p_unconditional: 0.2
+    model_dropout: 0.3
+    emb_dropout: 0.3
+  prior_model_h:
+    hidden_dim: 32
+    n_layers: 1
+    heads: 1
+    ff_mult: 1
+    use_rmsnorm: True
+    p_unconditional: 0.2
+    model_dropout: 0.3
+    emb_dropout: 0.3
+  cfg_scale: 1.  # classifier-free guidance scale
+  # ESS:  # under maintenance
+  #   use: False
+  #   error_ratio_ma_rate: 0.3
+
+
+
+fidelity_enhancer:
+  dim: 8
+  dim_mults:
+    - 1
+    - 2
+    - 4
+    - 8
+  resnet_block_groups: 4
+  dropout: 0.5
+  tau_search_rng: 
+    - 0.1
+    - 0.5
+    - 1
+    - 2
+    - 4
+  # tau_search_rng: 
+    # - 512
+  percept_loss_weight: 0. #1000
+
+evaluation:
+  batch_size: 128
+  min_num_gen_samples: 1024
+
+stage: 2
